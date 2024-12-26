@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Combinator Examples</title>
+  <style>
+    h1 {
+      text-decoration: underline;
+    }
+
+    /* adjacent sibling */
+    h1#adjacent {
+      color: red;
+    }
+
+    section#adjacent {
+      h2+p {
+        color: red;
+      }
+    }
+
+    /* general sibling */
+    h1#general {
+      color: blue;
+    }
+
+    section#general {
+      h2~p {
+        color: blue;
+      }
+    }
+
+    /* child */
+    h1#child {
+      color: blueviolet;
+    }
+
+    section#child {
+      div>p {
+        color: blueviolet;
+      }
+    }
+
+    /* descendant */
+    h1#descendant {
+      color: chocolate;
+    }
+
+    section#descendant {
+      div p {
+        color: chocolate;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="adjacent">Adjacent Sibling aka Next Sibling</h1>
+  <section id="adjacent">
+    <h2>Not applied</h2>
+    <p>CSS applied</p>
+    <h2>Not applied</h2>
+    <h3>Not applied</h3>
+    <p>Not applied</p>
+    <h2>Not applied</h2>
+    <p>CSS applied</p>
+  </section>
+
+  <h1 id="general">General Sibling aka Subsequent Sibling</h1>
+  <section id="general">
+    <h2>Not applied</h2>
+    <p>CSS applied</p>
+    <h2>Not applied</h2>
+    <h3>Not applied</h3>
+    <p>CSS applied</p>
+  </section>
+
+  <h1 id="child">Child</h1>
+  <section id="child">
+    <div>
+      <div>Not applied</div>
+      <p>CSS applied</p>
+      <div>Not applied</div>
+      <article>
+        <p>Not applied</p>
+      </article>
+      <p>CSS applied</p>
+    </div>
+  </section>
+
+  <h1 id="descendant">Descendant</h1>
+  <section id="descendant">
+    <div>
+      <div>Not applied</div>
+      <p>CSS applied</p>
+      <div>Not applied</div>
+      <article>
+        <p>CSS applied</p>
+      </article>
+      <p>CSS applied</p>
+    </div>
+  </section>
+
+</body>
+
+</html>

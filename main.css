@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -13,9 +13,16 @@ body {
   color: rgb(15, 238, 134);
 }
 
-h1 {
+/* combinator
+  h1 is a child of an element with id=product-overview 
+*/
+#product-overview h1 {
   color: white;
-  font-family: "Anton", serif;
+  font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+/* h1 {
+  font-family: sans-serif;
+} */
