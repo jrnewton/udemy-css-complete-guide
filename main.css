@@ -1,9 +1,30 @@
 #product-overview {
-  background: rgb(41, 25, 179);
+  background: rgb(219, 30, 5);
+}
+
+/* This is higher than [attribute] and .class, add this to the H1
+   element for "Choose Your Plan" to see the color change */
+#foobar {
+  color: blueviolet;
+}
+
+/* Order for [attribute] and .class matter when resolving conflicts. 
+   change these to see the color change.
+*/
+[data-test] {
+  color: cadetblue;
 }
 
 .section-title {
   color: rgb(15, 238, 134);
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: white;
   font-family: "Anton", serif;
   font-weight: 400;
   font-style: normal;
