@@ -1,26 +1,16 @@
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 #product-overview {
   background: rgb(219, 30, 5);
 }
 
-/* This is higher than [attribute] and .class, add this to the H1
-   element for "Choose Your Plan" to see the color change */
-#foobar {
-  color: blueviolet;
-}
-
-/* Order for [attribute] and .class matter when resolving conflicts. 
-   change these to see the color change.
-*/
-[data-test] {
-  color: cadetblue;
-}
-
 .section-title {
   color: rgb(15, 238, 134);
-}
-
-h1 {
-  font-family: sans-serif;
 }
 
 h1 {
