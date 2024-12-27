@@ -214,3 +214,4 @@ You can change this via `box-sizing` style.
 
 There is also `visibility: none` which will hide the element but the element will continue to block it's position in the layout.
 
+**Inline Block is sensative to whitespace in HTML source** 

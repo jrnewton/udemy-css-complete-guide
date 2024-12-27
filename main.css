@@ -9,10 +9,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-family: Tahoma, sans-serif;
   margin: 0;
 }
 
@@ -32,10 +29,7 @@ body {
 */
 #product-overview h1 {
   color: white;
-  font-family: "Anton", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-family: Georgia, sans-serif;
 }
 
 .main-header {
@@ -44,14 +38,25 @@ body {
   width: 100%;
 }
 
+/* hold the brand */
 .main-header>div {
   display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  color: #08630e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .main-nav {
   display: inline-block;
   text-align: right;
-  width: calc(100% - 50px);
+  /* KLUGE: take entire page minus the width of "uHost" div element plus the whitespace following it before main-nav div. */
+  width: calc(100% - 72px);
+  vertical-align: middle;
 }
 
 .main-nav__items {
@@ -62,7 +67,7 @@ body {
 
 .main-nav__item {
   display: inline-block;
-  padding: 10px;
+  /* padding: 10px;
   margin: 5px;
-  border: 1px black dashed
+  border: 1px black dashed */
 }
