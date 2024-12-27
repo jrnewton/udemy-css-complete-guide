@@ -18,6 +18,13 @@
   font-family: Georgia, sans-serif;
 }
 
+/* the containing div */
+.plan__list {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
 .plan {
   background-color: bisque;
   text-align: center;
