@@ -205,3 +205,11 @@ To make things take up more height, you must size from the top HTML element all 
 By default, Height and Width set the dimensions of the content, with padding, border and margin being additive to the total size of the area.  This is called _content_box_ sizing.
 
 You can change this via `box-sizing` style. 
+
+## Display Properties
+* none: element is not visible but present in the DOM.
+* block
+* inline
+* inline-block: render like an inline element (Ie next to adjacent elements) but also make available box properties like padding, border, margin.
+
+
