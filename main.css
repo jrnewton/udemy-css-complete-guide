@@ -1,12 +1,26 @@
+* {
+  /* We want to change box-sizing on all elements.
+     If you place this on body, it will be overriden by 
+     browser defaults which are more specific than inheritiance.
+     This is the rare case were we use the global selector
+     which is more specific than inheritance.
+   */
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 #product-overview {
-  background: rgb(219, 30, 5);
+  background:rgb(228, 93, 93);
+  width: 100%;
+  height: 528px;
+  padding: 10px;
 }
 
 .section-title {
@@ -19,10 +33,13 @@ body {
 #product-overview h1 {
   color: white;
   font-family: "Anton", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-/* h1 {
-  font-family: sans-serif;
-} */
+.main-header {
+  background:rgb(74, 224, 74);
+  padding: 8px 16px;
+  width: 100%;
+}

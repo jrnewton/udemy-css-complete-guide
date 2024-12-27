@@ -1,6 +1,6 @@
 My notes from the course.
 
-# Section 2
+# Section 2 - Basics
 ## General Terms
 
 - Serif: extending features at the end of strokes
@@ -166,3 +166,42 @@ Conflicts are resolved by looking at the order in file, where last style wins.  
 * ... 
 * certain combinators?
 * `*` selector
+
+# Section 3 - Box Model
+
+## Box Model
+From inside to outside:
+* content - the data to display within an HTML element.
+* padding - "inside" space between the data and the element border.
+* border - surrounds an element
+* margin - "outside" space between the element and the rest of the DOM.
+
+## Margin Collapsing
+  The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.
+
+From https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
+
+## Shorthand properties
+* Border: width style color, Eg 2px dashed orange
+* Margin: top right bottom left, Eg 5px 10px 5px 10px 
+* Margin: top & bottom left & right, Eg 5px 10px
+* Margin: all, Eg 8px
+
+## Height and Width
+Pixel values are aboslute and do not depend on the parent element.
+
+_Percentage_ values are based on the space within the parent element.  Many elements will be sized based on their content.  That leads to a width or height of 100% having no effect.
+
+To make things take up more height, you must size from the top HTML element all the way down to the target element.
+```
+  <html style="height: 100%;">
+    <body style="height: 100%;">
+      <main style="height: 100%;">
+        <!-- this will be 100% of page -->
+        <div style="height: 100%;">
+```
+
+## Box Sizing
+By default, Height and Width set the dimensions of the content, with padding, border and margin being additive to the total size of the area.  This is called _content_box_ sizing.
+
+You can change this via `box-sizing` style. 
