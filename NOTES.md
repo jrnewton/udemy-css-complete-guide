@@ -207,9 +207,10 @@ By default, Height and Width set the dimensions of the content, with padding, bo
 You can change this via `box-sizing` style. 
 
 ## Display Properties
-* none: element is not visible but present in the DOM.
+* none: element is not visible but present in the DOM.  It does not block a position in the layout.
 * block
 * inline
-* inline-block: render like an inline element (Ie next to adjacent elements) but also make available box properties like padding, border, margin.
+* inline-block: render like an inline element (Ie next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available.
 
+There is also `visibility: none` which will hide the element but the element will continue to block it's position in the layout.
 

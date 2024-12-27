@@ -44,9 +44,21 @@ body {
   width: 100%;
 }
 
-.main-nav {}
+.main-header>div {
+  display: inline-block;
+}
 
-.main-nav__items {}
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 50px);
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 .main-nav__item {
   display: inline-block;
