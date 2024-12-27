@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+}
+
+.box {
+  border: 2px red dashed;
+  padding: 20px 8px 20px 8px;
+  margin: 20px 10px 10px 20px;
+  text-align: center;
+  display: inline-block;  
+}
+
+.box:first-of-type {
+  height: 300px;
+  /* height: 100%; */
+  width: 50%;
+  box-sizing: border-box;
+  /* task 7 */
+  /* visibility: hidden; */
+  /* display: none; */
+}
+
+.box:last-of-type:hover {
+  border: 2px green dashed;
+}

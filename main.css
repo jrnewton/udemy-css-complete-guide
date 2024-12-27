@@ -14,7 +14,7 @@ body {
 }
 
 #product-overview {
-  background: rgb(228, 93, 93);
+  background: url("freedom.jpg");
   width: 100%;
   height: 528px;
   padding: 10px;
@@ -73,25 +73,29 @@ body {
 .main-nav__item a {
   text-decoration: none;
   color: #08630e;
+  font-weight: bold;
+  padding: 3px 0;
 }
 
-/** Render content via CSS.
-    There are accessibility concerns using this approach.
-*/ 
-.main-nav__item a::after {
-  content: " (Link)";
-  color: red;
-}
-
-.main-nav__item a:hover {
-  color:white;
-}
-
+.main-nav__item a:hover,
 .main-nav__item a:active {
   color:white;
+  border-bottom: 5px solid white;
 }
 
-p::first-letter {
-  font-size: 30px;
-  color: purple;
+/** order in this file matters with this selector
+    and "main-nav__item a" which are same level of
+    specificity. */
+.main-nav__item--cta a {
+  color:white;
+  background: rgb(228, 93, 93);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color:  rgb(228, 93, 93);
+  background: white;
+  border: none; /* remove border change */
 }
