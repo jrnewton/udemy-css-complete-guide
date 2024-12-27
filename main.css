@@ -85,6 +85,74 @@ body {
   color: rgb(175, 98, 3);
 }
 
+.plan__button {
+  color:white;
+  background-color: rgb(175, 98, 3);
+  font: inherit;
+  border: 1.5px solid rgb(175, 98, 3);
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.plan__button:hover, 
+.plan__button:active {
+  background:white;
+  color: rgb(175, 98, 3);
+}
+
+/** in the video, max shows the style on :focus
+    but in the latest version of chrome it's only present
+    in the (new) :focus-visible */
+.plan__button:focus,
+.plan__button:focus-visible {
+  outline: none;
+}
+
+#key-features {
+  background-color: rgb(241, 60, 90);
+  color: white;
+  margin-top: 80px;
+}
+
+#key-features .section-title {
+  color: white;
+  margin: 32px;
+  padding: 16px;
+}
+
+.key-feature__items {
+  margin: 0;
+  padding: 0;
+  /* padding-bottom: 16px; */
+  list-style: none;
+  text-align: center;
+}
+
+.key-feature__item {
+  display: inline-block;
+  /* background-color: rgb(233, 165, 177); */
+  width: 30%;
+  vertical-align: top;
+}
+
+.key-feature__item-desc {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.key-feature__circle {
+  background-color: rgb(233, 165, 177);;
+  width: 128px;
+  height: 128px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
 .main-header {
   background: rgb(74, 224, 74);
   padding: 8px 16px;
@@ -151,4 +219,33 @@ body {
   color:  rgb(228, 93, 93);
   background: white;
   border: none; /* remove border change */
+}
+
+.main-footer {
+  background-color: black;
+  color: white;
+  padding: 32px;
+  margin-top: 48px;
+}
+
+.main-footer__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__item {
+  display: inline-block; 
+  margin: 0 16px;
+}
+
+.main-footer__item a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__item a:hover,
+.main-footer__item a:active {
+  color: grey;
 }

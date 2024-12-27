@@ -4,13 +4,25 @@ My notes from the course.
 
 - Serif: extending features at the end of strokes
 
-# DevTools
-
-## Styles tab
-
+# DevTools Styles tab
 Styles are listed from most specific (top) to least specific (bottom).
 
 Click on keyword "inherited" to see the true value, which can include ~~value~~.
+
+# Naming Conventions
+Look into `B.E.M.` aka `block, element, modifier`
+
+Format is: `<block>__<element>--<modifier>`
+
+Example:
+```
+  plan__item--highlighted
+
+  /* plan is the logical container
+     item is the element
+     highlighted is the modifier
+  */
+```
 
 # Selectors
 
@@ -151,13 +163,16 @@ This is more flexible than _Adjacent Sibling_.
 ```
 
 # Specificity of Selectors
+TODO: need to make sure this is correct
+
 1. `!important`
 1. inline style (labeled `element.style` in devtools)
-1. combinators (Eg multiple selectors)
 1. `#ID`
 1. `.class`, `:pseudo-class` and `[attribute]`
 1. `<element>` and ::pseudo-element, `*` selector, browser defaults
 1. inherited styles
+
+__Where do combinators (Eg multiple selectors) go in this list?__
 
 Conflicts are resolved by looking at the order in file, where last style wins.  Eg if you an element has both a `.class` and an `[attribute]` with styles, then the last one in the file will win.
 
@@ -218,3 +233,7 @@ There is also `visibility: none` which will hide the element but the element wil
 Classes - `:class_name` - define a style for a _specific state_ of an element, Eg hover, read-only, first-child, not.
 Element - `::element_name` - define a style for a _specific part_ of an element, Eg before, after, first-letter.  [Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#summary)
 
+# Tricks
+* Set all parent elements to `width: 100%;` to allow child element to have a specific height.
+* Set left/right margin to auto `margin: 0 auto;` to center an element horizontally.  This does not work for vertical alignment.
+* Create circle by setting `height` and `width` to the same value and `border-radius: 50%`
