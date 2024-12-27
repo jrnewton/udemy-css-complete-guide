@@ -1,0 +1,136 @@
+* {
+  /* We want to change box-sizing on all elements.
+     If you place this on body, it will be overriden by 
+     browser defaults which are more specific than inheritiance.
+     This is the rare case were we use the global selector
+     which is more specific than inheritance.
+   */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+}
+
+.button {
+  color: white;
+  background-color: rgb(175, 98, 3);
+  font: inherit;
+  border: 1.5px solid rgb(175, 98, 3);
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: rgb(175, 98, 3);
+}
+
+/** in the video, max shows the style on :focus
+    but in the latest version of chrome it's only present
+    in the (new) :focus-visible */
+.button:focus,
+.button:focus-visible {
+  outline: none;
+}
+
+.main-header {
+  background: rgb(74, 224, 74);
+  padding: 8px 16px;
+  width: 100%;
+}
+
+/* container of main-header__brand */
+.main-header>div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  color: #08630e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  /* KLUGE: take entire page minus the width of "uHost" div element plus the whitespace following it before main-nav div. */
+  width: calc(100% - 72px);
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0px 16px
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: #08630e;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color:white;
+  border-bottom: 5px solid white;
+}
+
+/** order in this file matters with this selector
+    and "main-nav__item a" which are same level of
+    specificity. */
+.main-nav__item--cta a {
+  color:white;
+  background: rgb(228, 93, 93);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color:  rgb(228, 93, 93);
+  background: white;
+  border: none; /* remove border change */
+}
+
+.main-footer {
+  background-color: black;
+  color: white;
+  padding: 32px;
+  margin-top: 48px;
+}
+
+.main-footer__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__item {
+  display: inline-block; 
+  margin: 0 16px;
+}
+
+.main-footer__item a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__item a:hover,
+.main-footer__item a:active {
+  color: grey;
+}
