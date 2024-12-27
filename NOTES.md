@@ -217,6 +217,5 @@ There is also `visibility: none` which will hide the element but the element wil
 **Inline Block is sensative to whitespace in HTML source** 
 
 ## Pseudo Things
-Classes - `:class_name` - define a style for a _special state_ of an element.
-Element - `::element_name` - define a style for a _specific part_ of an element.
-
+Classes - `:class_name` - define a style for a _specific state_ of an element, Eg hover, read-only, first-child.
+Element - `::element_name` - define a style for a _specific part_ of an element, Eg before, after, first-letter.  [Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#summary)
