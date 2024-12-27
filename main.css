@@ -38,7 +38,7 @@ body {
   width: 100%;
 }
 
-/* hold the brand */
+/* container of main-header__brand */
 .main-header>div {
   display: inline-block;
   vertical-align: middle;
@@ -65,9 +65,12 @@ body {
   list-style: none;
 }
 
+.main-nav__item a {
+  text-decoration: none;
+  color: #08630e;
+}
+
 .main-nav__item {
   display: inline-block;
-  /* padding: 10px;
-  margin: 5px;
-  border: 1px black dashed */
+  margin: 0px 16px
 }
