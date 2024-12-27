@@ -1,28 +1,27 @@
 My notes from the course.
 
-# Section 2 - Basics
-## General Terms
+# General Terms
 
 - Serif: extending features at the end of strokes
 
-## DevTools
+# DevTools
 
-### Styles tab
+## Styles tab
 
 Styles are listed from most specific (top) to least specific (bottom).
 
 Click on keyword "inherited" to see the true value, which can include ~~value~~.
 
-## Selectors
+# Selectors
 
-### Universal 
+## Universal 
 ```
 <style>
   * { ... }
 <style>
 ```
 
-### Element
+## Element
 ```
 <style>
   body { ... }
@@ -33,7 +32,7 @@ Click on keyword "inherited" to see the true value, which can include ~~value~~.
 </body>
 ```
 
-### Class
+## Class
 ```
 <style>
   .post { ... }
@@ -44,7 +43,7 @@ Click on keyword "inherited" to see the true value, which can include ~~value~~.
 </body>
 ```
  
- ### Attribute
+## Attribute
  ```
  <style>
   [disabled] { ... }
@@ -55,7 +54,7 @@ Click on keyword "inherited" to see the true value, which can include ~~value~~.
 </form>
  ```
 
- ### ID
+## ID
  ```
  <style>
   #name-input { ... }
@@ -66,8 +65,8 @@ Click on keyword "inherited" to see the true value, which can include ~~value~~.
 </form>
  ```
 
-## Combinators
-### Adjacent Sibling aka Next Sibling
+# Combinators
+## Adjacent Sibling aka Next Sibling
 * Elements share the same parent.
 * Second element comes __immediately__ after first element.
 
@@ -88,7 +87,7 @@ Click on keyword "inherited" to see the true value, which can include ~~value~~.
   <p>CSS applied</p>
 </div>
 ```
-### General Sibling aka Subsequent Sibling
+## General Sibling aka Subsequent Sibling
 This is more flexible than _Adjacent Sibling_.
 
 * Elements share the same parent
@@ -110,7 +109,7 @@ This is more flexible than _Adjacent Sibling_.
 </div>
 ```
 
-### Child
+## Child
 * Second element is a _direct child_ of first element.
 
 ```
@@ -130,7 +129,7 @@ This is more flexible than _Adjacent Sibling_.
 </div>
 ```
 
-### Descendant
+## Descendant
 * Second element is a descendant of the first element.
 
 ```
@@ -151,7 +150,8 @@ This is more flexible than _Adjacent Sibling_.
 </div>
 ```
 
-## Specificity of Selectors
+# Specificity of Selectors
+1. `!important`
 1. inline style (labeled `element.style` in devtools)
 1. combinators (Eg multiple selectors)
 1. `#ID`
@@ -161,33 +161,31 @@ This is more flexible than _Adjacent Sibling_.
 
 Conflicts are resolved by looking at the order in file, where last style wins.  Eg if you an element has both a `.class` and an `[attribute]` with styles, then the last one in the file will win.
 
-## Performance
+# Performance
 * ID selector and class selector 
 * ... 
 * certain combinators?
 * `*` selector
 
-# Section 3 - Box Model
-
-## Box Model
+# Box Model
 From inside to outside:
 * content - the data to display within an HTML element.
 * padding - "inside" space between the data and the element border.
 * border - surrounds an element
 * margin - "outside" space between the element and the rest of the DOM.
 
-## Margin Collapsing
+# Margin Collapsing
   The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.
 
 From https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
-## Shorthand properties
+# Shorthand properties
 * Border: width style color, Eg 2px dashed orange
 * Margin: top right bottom left, Eg 5px 10px 5px 10px 
 * Margin: top & bottom left & right, Eg 5px 10px
 * Margin: all, Eg 8px
 
-## Height and Width
+# Height and Width
 Pixel values are aboslute and do not depend on the parent element.
 
 _Percentage_ values are based on the space within the parent element.  Many elements will be sized based on their content.  That leads to a width or height of 100% having no effect.
@@ -201,12 +199,12 @@ To make things take up more height, you must size from the top HTML element all 
         <div style="height: 100%;">
 ```
 
-## Box Sizing
+# Box Sizing
 By default, Height and Width set the dimensions of the content, with padding, border and margin being additive to the total size of the area.  This is called _content_box_ sizing.
 
 You can change this via `box-sizing` style. 
 
-## Display Properties
+# Display Properties
 * none: element is not visible but present in the DOM.  It does not block a position in the layout.
 * block
 * inline
@@ -216,6 +214,7 @@ There is also `visibility: none` which will hide the element but the element wil
 
 **Inline Block is sensative to whitespace in HTML source** 
 
-## Pseudo Things
-Classes - `:class_name` - define a style for a _specific state_ of an element, Eg hover, read-only, first-child.
+# Pseudo Things
+Classes - `:class_name` - define a style for a _specific state_ of an element, Eg hover, read-only, first-child, not.
 Element - `::element_name` - define a style for a _specific part_ of an element, Eg before, after, first-letter.  [Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#summary)
+
