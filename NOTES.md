@@ -215,3 +215,8 @@ You can change this via `box-sizing` style.
 There is also `visibility: none` which will hide the element but the element will continue to block it's position in the layout.
 
 **Inline Block is sensative to whitespace in HTML source** 
+
+## Pseudo Things
+Classes - `:class_name` - define a style for a _special state_ of an element.
+Element - `::element_name` - define a style for a _specific part_ of an element.
+
