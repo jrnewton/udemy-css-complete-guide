@@ -263,16 +263,25 @@ Will not take effect unless you've changed position property to a non-default va
 When there are multiple items with same z-index, the last element in the HTML file wins, and goes on top.
 
 ## Fixed
+Element is taken out of the document flow.
+
 Without top/right/bottom/left the element is positioned relative to it's parent element.
 With top/right/bottom/left the elelement is positioned relative to the viewport.
 
 ## Absolute
+Element is taken out of the document flow.
+
 If no ancestors have a position applied, then the position context is the HTML element itself.
 If ancestors have a position applied, then the position context is the closest ancestor with a position property.
 
 ## Relative
-Positioning context is the element itself.  Element remains in the document flow.
+Element remains in the document flow.
+
+Positioning context is the element itself.
 
 Top/right/bottom/left adjusts relative to where the element's current position.
 
-Problem: You can move the element outside of it's parent element.
+__Problem__: You can move the element outside of it's parent element.  Use `overflow: hidden;` in the parent element to ensure the element is not displayed when it goes outside the bounds of parent.  __Caveat__: you cannot apply `overflow: hidden;` to `<body>` as the default behavior in CSS says that it will instead be applied to `<html>`, which will ensure any child-elements of body will NOT be hidden.  To get around this: apply `overflow: hidden;` or `overflow: auto;` to `<html>` and apply `overflow: hidden;` to `<body>`.
+
+## Sticky
+
