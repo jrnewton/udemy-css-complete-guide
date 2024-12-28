@@ -270,7 +270,7 @@ Element is taken out of the document flow.
 ## Absolute
 Element is taken out of the document flow.
 
-* If no ancestors have a position applied, then the position context is the HTML element itself.
+* If no ancestors have a position applied, then the position context is the `<html>` element.
 * If ancestors have a position applied, then the position context is the closest ancestor with a position property.
 
 ## Relative
