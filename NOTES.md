@@ -258,43 +258,41 @@ What is the position context?
 * viewport (default for non-static position values)
 
 ## z-index
-Will not take effect unless you've changed position property to a non-default value.
-
-When there are multiple items with same z-index, the last element in the HTML file wins, and goes on top.
+* Will not take effect unless you've changed position property to a non-default value.
+* When there are multiple items with same z-index, the last element in the HTML file wins, and goes on top.
 
 ## Fixed
 Element is taken out of the document flow.
 
-Without top/right/bottom/left the element is positioned relative to it's parent element.
-With top/right/bottom/left the elelement is positioned relative to the viewport.
+* Without top/right/bottom/left the element is positioned relative to it's parent element.
+* With top/right/bottom/left the elelement is positioned relative to the viewport.
 
 ## Absolute
 Element is taken out of the document flow.
 
-If no ancestors have a position applied, then the position context is the HTML element itself.
-If ancestors have a position applied, then the position context is the closest ancestor with a position property.
+* If no ancestors have a position applied, then the position context is the HTML element itself.
+* If ancestors have a position applied, then the position context is the closest ancestor with a position property.
 
 ## Relative
 Element remains in the document flow.
 
-Positioning context is the element itself.
-
-Top/right/bottom/left adjusts relative to where the element's current position.
+* Positioning context is the element itself.
+* Top/right/bottom/left adjusts relative to where the element's current position.
 
 __Problem__: You can move the element outside of it's parent element.  Use `overflow: hidden;` in the parent element to ensure the element is not displayed when it goes outside the bounds of parent.  __Caveat__: you cannot apply `overflow: hidden;` to `<body>` as the default behavior in CSS says that it will instead be applied to `<html>`, which will ensure any child-elements of body will NOT be hidden.  To get around this: apply `overflow: hidden;` or `overflow: auto;` to `<html>` and apply `overflow: hidden;` to `<body>`.
 
 ## Sticky
-
 Hybrid of `relative` and `fixed`.
+
 * The element starts as `relative` when there are no distances set.
 * If you set a distance, it is between the viewport and the element.  Once that distance is reached, the element behaves as fixed.
 * If the element goes outside of its parent content area then it becomes hidden.
 
 ## Stacking Context
 
-z-index only affects elements within their parent.  You cannot set a z-index value such that you "escape" your parent's z-index position.
+If a parent has a z-index value defined, then child element z-index values will be contained within the parent.  That means no matter the child z-index value is, the child will not go below or above the parent z-index.
 
-In this example, `image-2` cannot be below `headline` or above `contact-us` without making adjustments to its parent (`headline`) z-index value first.
+In this example, `headline` has a z-index value, and `image-2` has a z-index value.  `image-2` cannot be below `headline` or above `contact-us` without making adjustments to its parent z-index value first.
 
 ![Stacking Context Example](notes-stacking-context.png)
 
