@@ -302,3 +302,52 @@ The stacking context is used to evaulate z-index values of all child elements re
 In this example, `headline` has a z-index value, and `image-2` has a z-index value.  `image-2` cannot be below `headline` or above `contact-us` without making adjustments to its parent z-index value first.
 
 ![Stacking Context Example](notes-stacking-context.png)
+
+# Backgrounds & Images
+
+## background-size
+
+`background-size: <height> <width>;` where height and width are:
+* auto
+* px
+* %
+
+`background-size: <keyword>;` where keyword is:
+* cover - Scales the image (while preserving its ratio) to the smallest possible size to fill the container (that is: both its height and width completely cover the container), leaving no empty space.
+* contain - Scales the image as large as possible within its container without cropping or stretching the image.
+
+## background-position
+For an image that does not fit into it's container, position defines where the cropping will occur.
+
+`background-position: <x offset> <y offset>;` where offset
+* px
+* % - determines where to crop the image.  A value of `top = 50%` means that top and bottom will be cropped equally. Read more at https://developer.mozilla.org/en-US/docs/Web/CSS/background-position#regarding_percentages
+* position keywords - center (sames as `50% 50%`) or left top (same as `0% 0%`)
+* position and % or px values - Eg `left 10% bottom 20%`
+
+X is evaluated relative to left and Y is evaluated relative to top.
+
+## background-origin
+
+Like box-sizing. TODO: more details
+
+## background-clip
+
+Overwrites background-origin. TODO: more details.
+
+## background-attachment
+
+Defines how image attaches (and scrolls) to the container or viewport.
+ 
+Not used often.
+
+## background shorthand
+
+```
+/*          image              position           /size  repeat    origin clip  */
+background: url("freedom.jpg") left 10% bottom 20%/cover no-repeat border-box   ;
+```
+
+When a single value is used in the `origin clip` position then it's used for both properties as shown in the example above.
+
+
