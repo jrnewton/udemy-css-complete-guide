@@ -257,3 +257,12 @@ Where should the element be placed relative to a context?
 What is the position context?
 * viewport (default for non-static position values)
 
+## z-index
+Will not take effect unless you've changed position property to a non-default value.
+
+When there are multiple items with same z-index, the last element in the HTML file wins, and goes on top.
+
+## Fixed
+
+Without top/right/bottom/left the element is positioned relative to it's parent element.
+With top/right/bottom/left the elelement is positioned relative to the viewport.

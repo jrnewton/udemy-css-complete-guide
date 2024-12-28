@@ -2,6 +2,14 @@ main {
   padding-top: 32px;
 }
 
+.background {
+  background: url("plans-background.jpg");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
 .package__section {
   margin: 16px 0;
   border: 4px solid darkgreen;
