@@ -219,7 +219,7 @@ By default, Height and Width set the dimensions of the content, with padding, bo
 
 You can change this via `box-sizing` style. 
 
-# Display Properties
+# Display Property
 * none: element is not visible but present in the DOM.  It does not block a position in the layout.
 * block
 * inline
@@ -237,3 +237,23 @@ Element - `::element_name` - define a style for a _specific part_ of an element,
 * Set all parent elements to `width: 100%;` to allow child element to have a specific height.
 * Set left/right margin to auto `margin: 0 auto;` to center an element horizontally.  This does not work for vertical alignment.
 * Create circle by setting `height` and `width` to the same value and `border-radius: 50%`
+
+# Positioning
+Applies to block and inline elements.
+
+How should the element be positioned?
+* static (default)
+* absolute
+* relative
+* fixed (remove from document flow)
+* sticky
+
+Where should the element be placed relative to a context?
+* top
+* right
+* bottom
+* left
+
+What is the position context?
+* viewport (default for non-static position values)
+
