@@ -172,14 +172,14 @@ TODO: need to make sure this is correct
 1. `<element>` and ::pseudo-element, `*` selector, browser defaults
 1. inherited styles
 
-__Where do combinators (Eg multiple selectors) go in this list?__
+__TODO: Where do combinators (Eg multiple selectors) go in this list?__
 
 Conflicts are resolved by looking at the order in file, where last style wins.  Eg if you an element has both a `.class` and an `[attribute]` with styles, then the last one in the file will win.
 
 # Performance
 * ID selector and class selector 
 * ... 
-* certain combinators?
+* certain combinators? (TODO: clarify)
 * `*` selector
 
 # Box Model
@@ -241,14 +241,14 @@ Element - `::element_name` - define a style for a _specific part_ of an element,
 # Positioning
 Applies to block and inline elements.
 
-How should the element be positioned?
+How should the element be positioned Aka __Position Context__
 * static (default)
 * absolute
 * relative
 * fixed
 * sticky
 
-Where should the element be placed relative to the position context?
+Where should the element be placed relative to the position context
 * top
 * right
 * bottom
@@ -259,32 +259,34 @@ __Note__: top/right/bottom/left will only have effect when the position property
 ### Fixed
 Element is taken out of the document flow.
 
-* Without top/right/bottom/left the element is positioned relative to it's parent element.
-* With top/right/bottom/left the elelement is positioned relative to the viewport.
+* Without top/right/bottom/left the position context is the parent element.
+* With top/right/bottom/left the position context is the _viewport_.
 
 ### Absolute
 Element is taken out of the document flow.
 
 * If no ancestors have a position applied, then the position context is the `<html>` element.
-* If ancestors have a position applied, then the position context is the closest ancestor with a position property.
+* If ancestors have a position applied, then the position context is the _closest ancestor with a position property_.
 
 ### Relative
 Element remains in the document flow.
 
-* Positioning context is the element itself.
-* Top/right/bottom/left adjusts relative to where the element's current position.
+* Positioning context is the _element_ itself.
+* Top/right/bottom/left adjusts relative to element's current position.
 
 __Problem__: You can move the element outside of it's parent element.  Use `overflow: hidden;` in the parent element to ensure the element is not displayed when it goes outside the bounds of parent.  __Caveat__: you cannot apply `overflow: hidden;` to `<body>` as the default behavior in CSS says that it will instead be applied to `<html>`, which will ensure any child-elements of body will NOT be hidden.  To get around this: apply `overflow: hidden;` or `overflow: auto;` to `<html>` and apply `overflow: hidden;` to `<body>`.
 
 ### Sticky
-Hybrid of `relative` and `fixed`.
-
 * The element starts as `relative` when there are no distances set.
-* If you set a distance, it is between the viewport and the element.  Once that distance is reached, the element behaves as fixed.
+* If you set a distance then the position context is either the _viewport_ or _another element_.  Once the distance is reached, the element behaves as `fixed`.
 * If the element goes outside of its parent content area then it becomes hidden.
 
+From MDN: ... a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
+
+__TODO__ need more details here.  Course coverage not great.
+
 ## z-index
-* default value is `0`.
+* default value is `auto` which is equal to `0`.
 * Will not take effect unless you've changed position property to a non-default value (Ie not `static`).
 * When there are multiple elements with same z-index, the last element in the HTML source file wins and is displayed above the other elements.
 
