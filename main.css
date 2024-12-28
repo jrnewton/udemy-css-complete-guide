@@ -6,7 +6,7 @@
 }
 
 .section-title {
-  color: #08630e;
+  color: rgb(250, 175, 83);
   text-align: center;
 }
 
@@ -19,7 +19,7 @@
 }
 
 /* the containing div */
-.plan__list {
+.plan__articles {
   width: 80%;
   margin: auto;
   text-align: center;
