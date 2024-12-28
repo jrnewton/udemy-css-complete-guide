@@ -245,35 +245,30 @@ How should the element be positioned?
 * static (default)
 * absolute
 * relative
-* fixed (remove from document flow)
+* fixed
 * sticky
 
-Where should the element be placed relative to a context?
+Where should the element be placed relative to the position context?
 * top
 * right
 * bottom
 * left
 
-What is the position context?
-* viewport (default for non-static position values)
+__Note__: top/right/bottom/left will only have effect when the position property is set to a non-default value (Ie not `static`).
 
-## z-index
-* Will not take effect unless you've changed position property to a non-default value.
-* When there are multiple items with same z-index, the last element in the HTML file wins, and goes on top.
-
-## Fixed
+### Fixed
 Element is taken out of the document flow.
 
 * Without top/right/bottom/left the element is positioned relative to it's parent element.
 * With top/right/bottom/left the elelement is positioned relative to the viewport.
 
-## Absolute
+### Absolute
 Element is taken out of the document flow.
 
 * If no ancestors have a position applied, then the position context is the `<html>` element.
 * If ancestors have a position applied, then the position context is the closest ancestor with a position property.
 
-## Relative
+### Relative
 Element remains in the document flow.
 
 * Positioning context is the element itself.
@@ -281,18 +276,27 @@ Element remains in the document flow.
 
 __Problem__: You can move the element outside of it's parent element.  Use `overflow: hidden;` in the parent element to ensure the element is not displayed when it goes outside the bounds of parent.  __Caveat__: you cannot apply `overflow: hidden;` to `<body>` as the default behavior in CSS says that it will instead be applied to `<html>`, which will ensure any child-elements of body will NOT be hidden.  To get around this: apply `overflow: hidden;` or `overflow: auto;` to `<html>` and apply `overflow: hidden;` to `<body>`.
 
-## Sticky
+### Sticky
 Hybrid of `relative` and `fixed`.
 
 * The element starts as `relative` when there are no distances set.
 * If you set a distance, it is between the viewport and the element.  Once that distance is reached, the element behaves as fixed.
 * If the element goes outside of its parent content area then it becomes hidden.
 
-## Stacking Context
+## z-index
+* default value is `0`.
+* Will not take effect unless you've changed position property to a non-default value (Ie not `static`).
+* When there are multiple elements with same z-index, the last element in the HTML source file wins and is displayed above the other elements.
 
-If a parent has a z-index value defined, then child element z-index values will be contained within the parent.  That means no matter the child z-index value is, the child will not go below or above the parent z-index.
+## Stacking Context
+Each z-index is evaluated within a `stacking context`.  By default the root element (`<html>`) establishes the initial stacking context.
+
+A stacking context is defined by any element:
+* element with position of `absolute` or `relative` and a `z-index` value other than `auto`.
+* element with position of `fixed` or `sticky`.
+
+The stacking context is used to evaulate z-index values of all child elements relative to each other.
 
 In this example, `headline` has a z-index value, and `image-2` has a z-index value.  `image-2` cannot be below `headline` or above `contact-us` without making adjustments to its parent z-index value first.
 
 ![Stacking Context Example](notes-stacking-context.png)
-
