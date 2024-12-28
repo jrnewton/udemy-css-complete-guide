@@ -271,4 +271,8 @@ If no ancestors have a position applied, then the position context is the HTML e
 If ancestors have a position applied, then the position context is the closest ancestor with a position property.
 
 ## Relative
+Positioning context is the element itself.  Element remains in the document flow.
 
+Top/right/bottom/left adjusts relative to where the element's current position.
+
+Problem: You can move the element outside of it's parent element.
