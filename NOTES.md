@@ -263,6 +263,12 @@ Will not take effect unless you've changed position property to a non-default va
 When there are multiple items with same z-index, the last element in the HTML file wins, and goes on top.
 
 ## Fixed
-
 Without top/right/bottom/left the element is positioned relative to it's parent element.
 With top/right/bottom/left the elelement is positioned relative to the viewport.
+
+## Absolute
+If no ancestors have a position applied, then the position context is the HTML element itself.
+If ancestors have a position applied, then the position context is the closest ancestor with a position property.
+
+## Relative
+

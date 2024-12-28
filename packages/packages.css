@@ -15,6 +15,7 @@ main {
   border: 4px solid darkgreen;
   border-left: none;
   width: 80%;
+  position: relative;
 }
 
 .package__section:active,
@@ -25,26 +26,29 @@ main {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.package__link {
+.package__section a {
   text-decoration: none;
   color: inherit;
   display: block;
   padding: 32px;
 }
 
-/* title */
-.package__link h1 {
-  color: black;
+.package__badge {
+  position: absolute;
+  margin: 20px;
+  top: 0;
+  right: 0;
+}
+
+.package__title {
   font-weight: bold;
 }
 
-/* subtitle */
-.package__link h2 {
+.package__subtitle {
   color: grey;
 }
 
-/* info */
-.package__link p {
+.package__text {
   background-color: white;
   color: green;
   padding: 16px;
@@ -69,17 +73,14 @@ main {
   border-left-color: lightcoral;
 }
 
-
 #premium {
   background-color: rgba(14, 79, 31, 0.90);
 }
 
-/* title */
-#premium h1 {
+#premium .package__title {
   color: white;
 }
 
-/* subtitle */
-#premium h2 {
+#premium .package__subtitle {
   color: #bbb;
 }
