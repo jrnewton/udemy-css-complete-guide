@@ -223,7 +223,7 @@ You can change this via `box-sizing` style.
 * none: element is not visible but present in the DOM.  It does not block a position in the layout.
 * block
 * inline
-* inline-block: render like an inline element (Ie next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available.
+* inline-block: render like an inline element (Ie renders next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available. TODO: confirm all box properties are true.
 
 There is also `visibility: none` which will hide the element but the element will continue to block it's position in the layout.
 
@@ -350,4 +350,11 @@ background: url("freedom.jpg") left 10% bottom 20%/cover no-repeat border-box   
 
 When a single value is used in the `origin clip` position then it's used for both properties as shown in the example above.
 
+## images
 
+* By default, the dimensions of the image will be used to render the image regardless of its parent element.
+* If the parent element is an inline element, then using percent values for image height/width will have the same behavior (Ie ignored).  THe parent element dimensions are used.
+* If the parent element is a block or inline-block element, then the parent container size controls the image size.
+
+
+Position and sizing of an img is not as flexible as background-image, but background-image should only be used for 'background' images due to accessibilty concerns.
