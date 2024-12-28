@@ -285,3 +285,16 @@ __Problem__: You can move the element outside of it's parent element.  Use `over
 
 ## Sticky
 
+Hybrid of `relative` and `fixed`.
+* The element starts as `relative` when there are no distances set.
+* If you set a distance, it is between the viewport and the element.  Once that distance is reached, the element behaves as fixed.
+* If the element goes outside of its parent content area then it becomes hidden.
+
+## Stacking Context
+
+z-index only affects elements within their parent.  You cannot set a z-index value such that you "escape" your parent's z-index position.
+
+In this example, `image-2` cannot be below `headline` or above `contact-us` without making adjustments to its parent (`headline`) z-index value first.
+
+![Stacking Context Example](notes-stacking-context.png)
+
