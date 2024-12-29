@@ -66,10 +66,8 @@
 
 @media (min-width: 40rem) {
   .testimonial {
-    margin: 3rem auto;
-    /* trick: center this element horizontally */
-    max-width: 70rem;
-    /* don't allow sections to expand unbounded */
+    margin: 3rem auto; /* trick: center this element horizontally */
+    max-width: 70rem;  /* don't allow sections to expand unbounded */
   }
 
   .testimonial__image-container {
