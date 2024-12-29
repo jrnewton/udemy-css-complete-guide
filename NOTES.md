@@ -512,7 +512,7 @@ __BUG__: After adding vw, you probably saw that the scrollbars appeared in case 
 * `minimum-scale` - limit zoom in level.
 
 ## Media Queries
-* Change design depending on size.
+* Change design depending on size and orientation.
 * It's important to order media queries based on width conditions; last true expression wins.
 ```
 /* do this */
@@ -524,5 +524,11 @@ __BUG__: After adding vw, you probably saw that the scrollbars appeared in case 
 @media (min-width: 40rem) { ... }
 ```
 
+You can combine multiple queries with `and` or with `,` (aka `or`):
+```
+/* all conditions must match */
+@media (min-width: 40rem) and (min-height: 60rem) { ... }
 
-
+/* at least one condition must match */
+@media (min-width: 40rem), (orientation: portrait) { ... }
+```
