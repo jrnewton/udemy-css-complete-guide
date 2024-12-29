@@ -58,7 +58,7 @@ main {
 .package__text {
   background-color: white;
   color: green;
-  padding: 16px;
+  padding: 1rem;
   border: solid 1px green;
   font-size: 1.3rem;
 }
