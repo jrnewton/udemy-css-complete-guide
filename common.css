@@ -11,6 +11,10 @@
 html {
   /* KLUGE: allow static or relative child elements to use height % */
   height: 100%;
+
+  /* adjust default font size for the page
+  font-size: 75%; 
+  */
 }
 
 body {
