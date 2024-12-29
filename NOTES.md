@@ -424,3 +424,8 @@ Examples:
 * Only 1 background-color can be used.  It will be last one listed in the style.
 * Multiple background-image styles can be used.
 
+# Filter
+* grayscale()
+
+![Filter Example](notes-filter.png) 
+
