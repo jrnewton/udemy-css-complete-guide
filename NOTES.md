@@ -468,3 +468,8 @@ __Questions__
 * EM - font size is based on current element _and_ ancestors.  This can lead to unexpected sizes.
 * REM - font size is based on root element font size.
 
+Rules of thumb:
+* Prefer REM over EM
+* Use REM for fonts, padding, margins.
+* Use absolute for shadows and borders.
+* 
