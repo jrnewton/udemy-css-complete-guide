@@ -434,4 +434,31 @@ Examples:
 # SVG
 * You can style the individual components of an SVG image with properties such as `stroke` and `stroke-width`.
 
+# Sizes & Units
+
+__Units__
+* pixels - `px`
+* percentages - `%`
+* root em - `rem`
+* em - `em`
+* viewport height - `vh`
+* viewport width - `vw`
+
+__Questions__
+* What properties can I use with these units?
+  * font-size
+  * padding
+  * border
+  * margin
+  * width, height
+  * top, right, bottom, left
+* How is the size calculated?
+  * absolute lengths - mostly ignore user settings, `px`
+  * viewport lengths - adjust to current viewport, `vh`, `vw`, `vmin`, `vmax`
+  * font-relative lengths - adjust to the default font size, `rem`, `em`
+  * percentages - remember these 3 rules: 
+    * `position: fixed` - containing element is the viewport.  Size is % of viewport.
+    * `position: absolute` - containing element is the closest ancestor with explicit position != static.  Size is % of _element content + padding_.  If there is no ancestor then viewport is used.
+    * `position: static`, `position: relative` - containing element is the closest ancestor that is a _block level_ element.  Size is % of _element content_.  __There is unexpected behavior when settings height % in this case__
+* What's the right unit to choose?
 
