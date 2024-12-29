@@ -461,10 +461,15 @@ __Questions__
     * `position: absolute` - containing element is the closest ancestor with explicit position != static.  Size is % of _element content + padding_.  If there is no ancestor then viewport is used.
     * `position: static`, `position: relative` - containing element is the closest ancestor that is a _block level_ element.  Size is % of _element content_.  __There is unexpected behavior when settings height % in this case__
 * What's the right unit to choose?
-  * TBD
+  * font-size (root element aka `<html>`) - `%`
+  * font-size - `rem`, or `em` for children only.
+  * padding, marging - `rem`
+  * border - `px`, keep it fixed because you don't want a 30px if it's using `rem`
+  * width, height - `%` or `vw`/`vh`, make the element size relative to something else.
+  * min-width, max-height, etc - `%` or `vw`/`vh`, ditto.
+  * top, right, bottom, left - `%`, ditto.
 
 ## REM vs EM
-
 * EM - font size is based on current element _and_ ancestors.  This can lead to unexpected sizes.
 * REM - font size is based on root element font size.
 
@@ -487,4 +492,9 @@ width: 80vw;     /* numbers are % of viewport */
 height: 100vh;
 ```
 
-__BUG__: After adding vw , you probably saw that the scrollbars appeared in case you are working on Windows.  This happens as using vw  on Windows does not include the scrollbars - vw: 100  is  equal to 100% of the viewport width + the scrollbars.
+__BUG__: After adding vw, you probably saw that the scrollbars appeared in case you are working on Windows.  This happens as using vw  on Windows does not include the scrollbars - vw: 100  is  equal to 100% of the viewport width + the scrollbars.
+
+## Auto
+* works for block level elements with an explicitly assigned width
+* easy way to center elements.  See main.css, `.plan__articles `
+
