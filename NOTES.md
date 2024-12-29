@@ -1,4 +1,6 @@
-My notes from the course.
+These are my notes from the course, https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/
+
+Content is roughly chronological based on the course sections, although sometimes I'll go back an update a previous section with new knowledge or to clarify a point.
 
 Look for `KLUDGE` in the source code for useful hacks.
 
@@ -428,4 +430,8 @@ Examples:
 * grayscale()
 
 ![Filter Example](notes-filter.png) 
+
+# SVG
+* You can style the individual components of an SVG image with properties such as `stroke` and `stroke-width`.
+
 
