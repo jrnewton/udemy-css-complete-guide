@@ -1,45 +1,75 @@
-// TODO: 
-// null checks
-// get backdrop by ID (there should only be a single backdrop)
-// only run code once document is loaded/ready.
-const backdrop = document.querySelector('.backdrop');
-console.log('backdrop', backdrop);
-
-const modalDialog = document.querySelector('.modal');
-console.log('modal', modalDialog);
-
-const modalNoButton = document.querySelector('.modal__action--negative');
-console.log('modalNoButton', modalNoButton);
-
-const enableModal = function (enable) {
-  if (enable) {
-    // the style property provides access to inline styles
-    backdrop.style.display = 'block';
-    modalDialog.style.display = 'block';
-  }
-  else {
-    backdrop.style.display = 'none';
-    modalDialog.style.display = 'none';
+function docReady(callback) {
+  //From MDN
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", callback);
+  } else {
+    callback();
   }
 }
 
-modalNoButton.addEventListener('click', (event) => {
-  console.log('modal no button clicked');
-  enableModal(false);
-});
+docReady(() => {
+  const backdrop = document.querySelector('#backdrop');
+  console.debug('backdrop', backdrop);
+  if (backdrop == null) {
+    console.warn('exit, backdrop is null');
+    return;
+  }
 
-backdrop.addEventListener('click', (event) => {
-  console.log('backdrop clicked');
-  enableModal(false);
-});
+  const modalDialog = document.querySelector('.modal');
+  console.debug('modal', modalDialog);
+  if (modalDialog == null) {
+    console.warn('exit, modalDialog is null');
+    return;
+  }
 
-let buttons = document.querySelectorAll('.button');
-console.log('buttons');
+  const modalNoButton = document.querySelector('.modal__action--negative');
+  console.debug('modalNoButton', modalNoButton);
+  if (modalNoButton == null) {
+    console.warn('exit, modalNoButton is null');
+    return;
+  }
 
-for (const b of buttons) {
-  console.log(b);
-  b.addEventListener('click', (event) => {
-    console.log('button clicked');
-    enableModal(true);
+  let buttons = null;
+  try {
+    buttons = document.querySelectorAll('.button');
+    console.debug('buttons');
+  }
+  catch (e) {
+    console.error("exit, button queryselector got exception", e);
+    return;
+  }
+  
+  if (buttons.length === 0) {
+    console.warn('exit, .button nodelist is empty');
+    return;
+  }
+
+  const enableModal = function (enable) {
+    if (enable) {
+      // the style property provides access to inline styles
+      backdrop.style.display = 'block';
+      modalDialog.style.display = 'block';
+    }
+    else {
+      backdrop.style.display = 'none';
+      modalDialog.style.display = 'none';
+    }
+  }
+
+  modalNoButton.addEventListener('click', (event) => {
+    console.info('modal no button clicked');
+    enableModal(false);
   });
-}
+
+  backdrop.addEventListener('click', (event) => {
+    console.info('backdrop clicked');
+    enableModal(false);
+  });
+
+  for (const b of buttons) {
+    b.addEventListener('click', (event) => {
+      console.info('button clicked');
+      enableModal(true);
+    });
+  }
+});
