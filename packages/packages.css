@@ -23,8 +23,7 @@ main {
 
 .package__section:active,
 .package__section:hover {
-  border: 4px solid lightcoral;
-  border-left: none;
+  border-color: lightcoral;
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -91,4 +90,26 @@ main {
 
 #premium .package__subtitle {
   color: #bbb;
+}
+
+@media (min-width: 40rem) {
+  main {
+    margin: 3rem auto; /* trick: center this element horizontally */
+    max-width: 70rem;  /* don't allow sections to expand unbounded */
+  }
+}
+
+@media (min-width: 70rem) {
+  .package__section {
+    border-left: 4px solid darkgreen;
+  }
+
+  #free {
+    border-right: 4px solid darkgreen;
+  }
+  
+  #free:active,
+  #free:hover {
+    border-right-color: lightcoral;
+  }
 }
