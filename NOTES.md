@@ -498,3 +498,7 @@ __BUG__: After adding vw, you probably saw that the scrollbars appeared in case 
 * works for block level elements with an explicitly assigned width
 * easy way to center elements.  See main.css, `.plan__articles `
 
+# Style with Javascript
+* Access `inline` styles using the `style` DOM element property.
+* Use `className` or `classList` DOM element property.  Use `classList` to easily add/remove a single class. 
+
