@@ -8,20 +8,10 @@
   box-sizing: border-box;
 }
 
-html {
-  /* KLUGE: allow static or relative child elements to use height % */
-  height: 100%;
-
-  /* adjust default font size for the page
-  font-size: 75%; 
-  */
-}
-
 body {
   font-family: Tahoma, sans-serif;
   margin: 0;
-  /* KLUGE: allow static or relative child elements to use height % */
-  height: 100%;
+  
 }
 
 #modal-backdrop, 
