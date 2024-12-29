@@ -466,4 +466,5 @@ __Questions__
 ## REM vs EM
 
 * EM - font size is based on current element _and_ ancestors.  This can lead to unexpected sizes.
-* REM - fonts ize is based on root element font size.
+* REM - font size is based on root element font size.
+
