@@ -8,10 +8,10 @@ function docReady(callback) {
 }
 
 docReady(() => {
-  const backdrop = document.querySelector('#backdrop');
-  console.debug('backdrop', backdrop);
-  if (backdrop == null) {
-    console.warn('exit, backdrop is null');
+  const modalBackdrop = document.querySelector('#modal-backdrop');
+  console.debug('modalBackdrop', modalBackdrop);
+  if (modalBackdrop == null) {
+    console.warn('exit, modalBackdrop is null');
     return;
   }
 
@@ -22,10 +22,10 @@ docReady(() => {
     return;
   }
 
-  const modalNoButton = document.querySelector('.modal__action--negative');
-  console.debug('modalNoButton', modalNoButton);
-  if (modalNoButton == null) {
-    console.warn('exit, modalNoButton is null');
+  const modalCloseButton = document.querySelector('.modal__action--negative');
+  console.debug('modalCloseButton', modalCloseButton);
+  if (modalCloseButton == null) {
+    console.warn('exit, modalCloseButton is null');
     return;
   }
 
@@ -47,22 +47,22 @@ docReady(() => {
   const enableModal = function (enable) {
     if (enable) {
       // the style property provides access to inline styles
-      backdrop.style.display = 'block';
       modalDialog.style.display = 'block';
+      modalBackdrop.style.display = 'block';
     }
     else {
-      backdrop.style.display = 'none';
+      modalBackdrop.style.display = 'none';
       modalDialog.style.display = 'none';
     }
   }
 
-  modalNoButton.addEventListener('click', (event) => {
+  modalCloseButton.addEventListener('click', (event) => {
     console.info('modal no button clicked');
     enableModal(false);
   });
 
-  backdrop.addEventListener('click', (event) => {
-    console.info('backdrop clicked');
+  modalBackdrop.addEventListener('click', (event) => {
+    console.info('modal backdrop clicked');
     enableModal(false);
   });
 
@@ -72,4 +72,49 @@ docReady(() => {
       enableModal(true);
     });
   }
+});
+
+// nav menu toggle button
+docReady(() => {
+  const navBackdrop = document.querySelector('#mobile-nav-backdrop');
+  console.debug('navBackdrop', navBackdrop);
+  if (navBackdrop == null) {
+    console.warn('exit, navBackdrop is null');
+    return;
+  }
+
+  const toggleButton = document.querySelector('.toggle-button');
+  console.debug('toggleButton', toggleButton);
+  if (toggleButton == null) {
+    console.warn('exit, toggleButton is null');
+    return;
+  }
+
+  const navMenu = document.querySelector('.mobile-nav');
+  console.debug('navMenu', navMenu);
+  if (navMenu == null) {
+    console.warn('exit, navMenu is null');
+    return;
+  }
+
+  const enableNavMenu = function (enable) {
+    if (enable) {
+      navMenu.style.display = 'block';
+      navBackdrop.style.display = 'block';
+    }
+    else {
+      navMenu.style.display = 'none';
+      navBackdrop.style.display = 'none';
+    }
+  }
+
+  toggleButton.addEventListener('click', (event) => {
+    console.info('nav button clicked');
+    enableNavMenu(true);
+  });
+
+  navBackdrop.addEventListener('click', (event) => { 
+    console.info('nav backdrop clicked');
+    enableNavMenu(false);
+  });
 });
