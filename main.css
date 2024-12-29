@@ -6,6 +6,8 @@
 
   /* KLUGE: define margin to push content under navbar. */
   margin-top: 2.5rem;
+  /* they use 3.75 rem here */
+
   /* to allow #product-overview h1 to position itself 
      relative to us */
   position: relative;
@@ -168,7 +170,7 @@
 */
 
 /* medium screens */
-@media (min-width: 720px) {
+@media (min-width: 40rem) and (min-height: 40rem) {
   #product-overview {
     height: 40vh;
     background-position: 50% 25%;
@@ -177,7 +179,9 @@
   #product-overview h1 {
     font-size: 3rem;
   }
+}
 
+@media (min-width: 40rem) {
   .plan {
     vertical-align: middle;
     display: inline-block;
@@ -190,7 +194,7 @@
     width: 100%;
     text-align: center;
   }
- 
+
   .plan--highlighted {
     /*          X   Y   blur  spread  color               */
     /*                                last arg is opacity */
@@ -203,7 +207,7 @@
     list-style: none;
     text-align: center;
   }
-  
+
   .key-feature__item {
     display: inline-block;
     width: 30%;

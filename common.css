@@ -223,7 +223,7 @@ html, body {
   margin: 0.6rem 0;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 40rem) {
   .main-nav {
     display: inline-block;
     text-align: right;
