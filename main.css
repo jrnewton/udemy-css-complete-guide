@@ -1,6 +1,5 @@
 #product-overview {
-  /*          image              position           /size  repeat    origin clip  */
-  background: url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box   ;
+  background: linear-gradient(to top, rgba(80,68,18,0.6) 10%, transparent), url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box, bisque;
   width: 100%;
   height: 528px;
   padding: 10px;

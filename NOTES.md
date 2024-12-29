@@ -378,3 +378,49 @@ box-shadow: 2px   2px   2px    2px   rgba(0, 0, 0, 0.5);
 
 See https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 
+# Gradients
+* Gradients are treated as images.
+* My notes are light - read MDN instead if you need it.
+
+## Linear
+* Use builtin `linear-gradient()` function.
+
+Examples:
+```
+  background-image: linear-gradient(30deg, red, blue);
+  background-image: linear-gradient(to left bottom, red, blue);
+  background-image: linear-gradient(180deg, red, blue, green, yellow, orange);
+  background-image: linear-gradient(360deg, red, transparent);
+  /*                                        red ends after 70% */
+  background-image: linear-gradient(180deg, red 70%, blue, grey);
+  /*                                        blue ends after 80% */
+  background-image: linear-gradient(180deg, red 70%, blue 80%, grey);
+  /*                                        blue ends after 60% which makes a hard edge */
+  background-image: linear-gradient(180deg, red 70%, blue 60%, grey);
+```
+
+* Elipse can have it's size (width, height) adjusted.  See circle examples.
+
+## Radial
+* Use builtin `radial-gradient()` function.
+* by default, makes ellipse.  use optional first arg to make a circle.
+
+Examples:
+```
+  background-image: radial-gradient(red, blue);
+  background-image: radial-gradient(red, blue, green);
+  /*                                shape                         */
+  background-image: radial-gradient(circle, red, blue, green);
+  /*                                          shape start 'at top'
+                                               v                  */
+  background-image: radial-gradient(circle at top, red, blue, green);
+  /*                                ditto      X  Y               */
+  background-image: radial-gradient(circle at 20% 50%, red, blue, green);
+  /*                                       size                   */
+  background-image: radial-gradient(circle 20px at 20% 50%, red, blue, green);
+```
+
+## Stacking Backgrounds
+* Only 1 background-color can be used.  It will be last one listed in the style.
+* Multiple background-image styles can be used.
+
