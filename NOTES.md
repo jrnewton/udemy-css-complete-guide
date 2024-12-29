@@ -1,7 +1,8 @@
 My notes from the course.
 
-# General Terms
+Look for `KLUDGE` in the source code for useful hacks.
 
+# Fonts
 - Serif: extending features at the end of strokes
 
 # DevTools Styles tab
@@ -353,8 +354,27 @@ When a single value is used in the `origin clip` position then it's used for bot
 ## images
 
 * By default, the dimensions of the image will be used to render the image regardless of its parent element.
-* If the parent element is an inline element, then using percent values for image height/width will have the same behavior (Ie ignored).  THe parent element dimensions are used.
-* If the parent element is a block or inline-block element, then the parent container size controls the image size.
+* __KEY__ If the parent element is an inline element, then using percent values for image height/width will have the same behavior (Ie ignored).  THe parent element dimensions are used.
+* __KEY__ If the parent element is a block or inline-block element, then the parent container size controls the image size.
 
 
 Position and sizing of an img is not as flexible as background-image, but background-image should only be used for 'background' images due to accessibilty concerns.
+
+
+# box-shadow
+Args:
+* X
+* Y
+* blue
+* spread
+* color
+  * rgb and the 4th value is opacity
+
+```
+/*          X     Y     blur  spread   color                    */
+box-shadow: 2px   2px   2px    2px   rgba(0, 0, 0, 0.5);
+/*                                                   ^opacity   */
+```
+
+See https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
+
