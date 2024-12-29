@@ -502,3 +502,27 @@ __BUG__: After adding vw, you probably saw that the scrollbars appeared in case 
 * Access `inline` styles using the `style` DOM element property.
 * Use `className` or `classList` DOM element property.  Use `classList` to easily add/remove a single class. 
 
+# Responsive Design
+
+## Viewport meta tag
+* `width` - adjust site to device viewport; translate hardware pixesl into css software pixels.
+* `initial-scale` - initial zoom level. 1.0 is default.
+* `user-scalable` - can the user zoom in/out of your site?  Defaults to yes.
+* `maximum-scale` - limit zoom out level.
+* `minimum-scale` - limit zoom in level.
+
+## Media Queries
+* Change design depending on size.
+* It's important to order media queries based on width conditions; last true expression wins.
+```
+/* do this */
+@media (min-width: 40rem) { ... }
+@media (min-width: 60rem) { ... }
+
+/* don't do this, second rule always wins */
+@media (min-width: 60rem) { ... }
+@media (min-width: 40rem) { ... }
+```
+
+
+

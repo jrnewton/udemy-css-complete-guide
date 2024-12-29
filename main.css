@@ -1,18 +1,14 @@
 #product-overview {
-  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box, bisque;
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") center/cover no-repeat border-box, bisque;
   /* KLUGE: do NOT use 100vw here, scrollbars will appear (only on Windows) */
-  width: 100%; 
+  width: 100%;
   height: 33vh;
+
   /* KLUGE: define margin to push content under navbar. */
   margin-top: 2.5rem;
   /* to allow #product-overview h1 to position itself 
      relative to us */
   position: relative;
-}
-
-.section-title {
-  color: rgb(250, 175, 83);
-  text-align: center;
 }
 
 /* slogan text 
@@ -25,31 +21,31 @@
   position: absolute;
   bottom: 5%;
   left: 5%;
+  font-size: 1.6rem;
+}
+
+.section-title {
+  color: rgb(250, 175, 83);
+  text-align: center;
 }
 
 /* the containing div */
-.plan__articles {
-  width: 80%;
-  margin: auto;
+/* .plan__articles {
+  width: 100%;
   text-align: center;
-}
+} */
 
 .plan {
   background-color: bisque;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  width: 100%;
 }
 
 .plan--highlighted {
   background-color: rgb(243, 176, 95);
   color: white;
-  /*          X   Y   blur  spread  color               */
-  /*                                last arg is opacity */
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
@@ -177,4 +173,41 @@
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+/* We are adjusting all styles to look good on mobile
+   and then defining a breakpoint with corresponding
+   styles for larger screens which have a width >= x.
+*/
+
+/* medium screens */
+@media (min-width: 640px) {
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+
+  .plan {
+    vertical-align: middle;
+    display: inline-block;
+    width: 30%;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan__articles {
+    width: 100%;
+    text-align: center;
+  }
+ 
+  .plan--highlighted {
+    /*          X   Y   blur  spread  color               */
+    /*                                last arg is opacity */
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
 }
