@@ -61,6 +61,11 @@ body {
   outline: none;
 }
 
+.open {
+  /* use !important to ensure this lower priority style is used over high priority styles */
+  display: block !important;
+}
+
 .main-header {
   background: rgb(74, 224, 74);
   padding: 0.5rem 1rem;

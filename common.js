@@ -38,7 +38,7 @@ docReady(() => {
     console.error("exit, button queryselector got exception", e);
     return;
   }
-  
+
   if (buttons.length === 0) {
     console.warn('exit, .button nodelist is empty');
     return;
@@ -47,12 +47,12 @@ docReady(() => {
   const enableModal = function (enable) {
     if (enable) {
       // the style property provides access to inline styles
-      modalDialog.style.display = 'block';
-      modalBackdrop.style.display = 'block';
+      modalDialog.classList.add('open');
+      modalBackdrop.classList.add('open');
     }
     else {
-      modalBackdrop.style.display = 'none';
-      modalDialog.style.display = 'none';
+      modalDialog.classList.remove('open');
+      modalBackdrop.classList.remove('open');
     }
   }
 
@@ -99,12 +99,12 @@ docReady(() => {
 
   const enableNavMenu = function (enable) {
     if (enable) {
-      navMenu.style.display = 'block';
-      navBackdrop.style.display = 'block';
+      navMenu.classList.add('open');
+      navBackdrop.classList.add('open');
     }
     else {
-      navMenu.style.display = 'none';
-      navBackdrop.style.display = 'none';
+      navMenu.classList.remove('open');
+      navBackdrop.classList.remove('open');
     }
   }
 
@@ -113,7 +113,7 @@ docReady(() => {
     enableNavMenu(true);
   });
 
-  navBackdrop.addEventListener('click', (event) => { 
+  navBackdrop.addEventListener('click', (event) => {
     console.info('nav backdrop clicked');
     enableNavMenu(false);
   });
