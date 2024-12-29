@@ -462,3 +462,8 @@ __Questions__
     * `position: static`, `position: relative` - containing element is the closest ancestor that is a _block level_ element.  Size is % of _element content_.  __There is unexpected behavior when settings height % in this case__
 * What's the right unit to choose?
   * TBD
+
+## REM vs EM
+
+* EM - font size is based on current element _and_ ancestors.  This can lead to unexpected sizes.
+* REM - fonts ize is based on root element font size.
