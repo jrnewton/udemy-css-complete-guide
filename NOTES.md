@@ -492,7 +492,7 @@ width: 80vw;     /* numbers are % of viewport */
 height: 100vh;
 ```
 
-__BUG__: After adding vw, you probably saw that the scrollbars appeared in case you are working on Windows.  This happens as using vw  on Windows does not include the scrollbars - vw: 100  is  equal to 100% of the viewport width + the scrollbars.
+__BUG__: After adding vw, you probably saw that the scrollbars appeared in case you are working on Windows.  This happens as using vw on Windows does not include the scrollbars - `vw100`  is  equal to `100%` of the viewport width + the scrollbars.
 
 ## Auto
 * works for block level elements with an explicitly assigned width
