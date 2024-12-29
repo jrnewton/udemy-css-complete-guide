@@ -11,10 +11,13 @@
 body {
   font-family: Tahoma, sans-serif;
   margin: 0;
-  
 }
 
-#modal-backdrop, 
+html, body {
+  height: 100%;
+}
+
+#modal-backdrop,
 #mobile-nav-backdrop {
   display: none;
   position: fixed;
@@ -64,6 +67,9 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+
+  /* ensure that header does shrink */
+  min-height: 4rem;
 }
 
 /* container of main-header__brand */
@@ -87,11 +93,7 @@ body {
 }
 
 .main-nav {
-  display: inline-block;
-  text-align: right;
-  /* KLUGE: take entire page minus the width of "uHost" div element plus the whitespace following it before main-nav div. */
-  width: calc(100% - 122px);
-  vertical-align: middle;
+  display: none;
 }
 
 .main-nav__items {
@@ -155,8 +157,7 @@ body {
 }
 
 .main-footer__item {
-  display: inline-block;
-  margin: 0 1rem;
+  margin: 1rem 0;
 }
 
 .main-footer__item a {
@@ -221,4 +222,23 @@ body {
   background: black;
   display: block;
   margin: 0.6rem 0;
+}
+
+@media (min-width: 720px) {
+  .main-nav {
+    display: inline-block;
+    text-align: right;
+    /* KLUGE: take entire page minus the width of "uHost" div element plus the whitespace following it before main-nav div. */
+    width: calc(100% - 122px);
+    vertical-align: middle;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .main-footer__item {
+    display: inline-block;
+    margin: 0 1rem;
+  }
 }
