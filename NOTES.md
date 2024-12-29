@@ -472,4 +472,19 @@ Rules of thumb:
 * Prefer REM over EM
 * Use REM for fonts, padding, margins.
 * Use absolute for shadows and borders.
-* 
+
+
+## Viewport Units
+* vh - viewport height
+* vw - viewport width
+* vmin - smallest component of viewport (either height or width)
+* vmax - largest component of viewport (either height or width)
+
+
+Syntax:
+```
+width: 80vw;     /* numbers are % of viewport */
+height: 100vh;
+```
+
+__BUG__: After adding vw , you probably saw that the scrollbars appeared in case you are working on Windows.  This happens as using vw  on Windows does not include the scrollbars - vw: 100  is  equal to 100% of the viewport width + the scrollbars.

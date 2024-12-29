@@ -1,7 +1,7 @@
 #product-overview {
-  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box, bisque;
-  width: 100%;
-  height: 528px;
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box, bisque;
+  width: 100%; /* do NOT use 100vw here, scrollbars will appear, only on Windows. */
+  height: 33vh;
   /* KLUGE: define margin to push content under navbar. */
   margin-top: 2.5rem;
   /* to allow #product-overview h1 to position itself 
