@@ -541,4 +541,9 @@ You can combine multiple queries with `and` or with `,` (aka `or`):
 ```
 
 # Styling Forms
-* Use `inherit` keyword to override browser defaults for styles like `font-family`
+* Many form elements have default browser styles that you will want to override.  Use `inherit` keyword for that.
+* Use `:focus` pseudo selector to provide feedback.
+* `outline` is helpful when styling form elements.  It's different than `border`.
+* For validation - use `:valid` and `:invalid` pseudo selectors along with `invalid`, `disabled` and `required` element attributes.
+* Styling `select` form element requires extra work.  See https://stackoverflow.com/questions/1895476/how-do-i-style-a-select-dropdown-with-only-css
+
