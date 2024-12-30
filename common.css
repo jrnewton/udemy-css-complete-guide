@@ -55,6 +55,14 @@ html, body {
   outline: none;
 }
 
+.button[disabled] {
+  cursor: not-allowed;
+  border: #747474;
+  background-color: #ccc;
+  color: #747474;
+}
+
+
 .open {
   /* use !important to ensure this lower priority style is used over high priority styles */
   display: block !important;
