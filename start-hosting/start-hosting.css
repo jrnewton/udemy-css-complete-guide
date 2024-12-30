@@ -65,6 +65,15 @@ main {
   
 }
 
+.signup-form :invalid {
+  /* !important is needed because the rule for
+     `.signup-form input:not([type="checkbox"]),`
+     is more specific and wins out over this one.
+  */
+  border: 1px solid red !important; 
+  background-color: rgb(255, 180, 180);
+}
+
 .signup-form button[type="submit"] {
   display: block;
   margin-top: 1rem;
