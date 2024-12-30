@@ -189,10 +189,15 @@ Conflicts are resolved by looking at the order in file, where last style wins.  
 
 # Box Model
 From inside to outside:
-* content - the data to display within an HTML element.
-* padding - "inside" space between the data and the element border.
-* border - surrounds an element
-* margin - "outside" space between the element and the rest of the DOM.
+* `content` - the data to display within an HTML element.
+* `padding` - "inside" space between the data and the element border.
+* `border` - surrounds an element
+* `margin` - "outside" space between the element and the rest of the DOM.
+
+There is also `outline`:
+* Comes after `border`.
+* Does not affect box size.
+* Does not affect box shadow.
 
 # Margin Collapsing
   The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.
@@ -536,4 +541,4 @@ You can combine multiple queries with `and` or with `,` (aka `or`):
 ```
 
 # Styling Forms
-
+* Use `inherit` keyword to override browser defaults for styles like `font-family`
