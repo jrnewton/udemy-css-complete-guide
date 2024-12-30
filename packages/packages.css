@@ -1,5 +1,5 @@
 main {
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 
 .background {
@@ -94,8 +94,10 @@ main {
 
 @media (min-width: 40rem) {
   main {
-    margin: 3rem auto; /* trick: center this element horizontally */
     max-width: 70rem;  /* don't allow sections to expand unbounded */
+
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

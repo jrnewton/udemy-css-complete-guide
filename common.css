@@ -13,9 +13,10 @@ body {
   margin: 0;
 }
 
+/* This messes with our style to ensure footer is at the bottom of page.
 html, body {
   height: 100%;
-}
+} */
 
 #modal-backdrop,
 #mobile-nav-backdrop {
@@ -57,6 +58,16 @@ html, body {
 .open {
   /* use !important to ensure this lower priority style is used over high priority styles */
   display: block !important;
+}
+
+main {
+  /* ensure that main takes up vertical space such that the footer 
+     is always at the bottom of the viewport 
+     
+     The calc is the vh minus the size of navbar (3.5rem) minus size of the footer (8rem).
+  */
+  min-height: calc(100vh - 4rem - 131px);
+  margin-top: 4rem;
 }
 
 .main-header {

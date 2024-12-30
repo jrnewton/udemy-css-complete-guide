@@ -1,9 +1,9 @@
-.testimonial {
-  font-size: 1.2rem;
+main {
+  padding-top: 2.5rem;
 }
 
-.testimonial:first-of-type {
-  margin-top: 6rem;
+.testimonial {
+  font-size: 1.2rem;
 }
 
 .testimonial__image-container {
@@ -66,7 +66,7 @@
 
 @media (min-width: 40rem) {
   .testimonial {
-    margin: 3rem auto; /* trick: center this element horizontally */
+    margin: 0 auto; /* trick: center this element horizontally */
     max-width: 70rem;  /* don't allow sections to expand unbounded */
   }
 
