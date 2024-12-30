@@ -69,6 +69,8 @@ Example:
 </form>
  ```
 
+ There are many more options here, go read https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax. 
+
 ## ID
  ```
  <style>
@@ -532,3 +534,6 @@ You can combine multiple queries with `and` or with `,` (aka `or`):
 /* at least one condition must match */
 @media (min-width: 40rem), (orientation: portrait) { ... }
 ```
+
+# Styling Forms
+

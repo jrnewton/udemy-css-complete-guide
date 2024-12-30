@@ -1,0 +1,47 @@
+main {
+  padding-top: 2.5rem;
+}
+
+.signup-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color:rgb(228, 93, 93);
+}
+
+.signup-form {
+  padding: 1rem;
+}
+
+.signup-form label {
+  font-weight: bold;
+}
+  
+.signup-form label, 
+.signup-form select, 
+.signup-form input {
+  display: block;
+  margin-top: 1rem;
+  /* KLUGE
+      Form elements like `input` and `select` are `inline` elements and when changed
+      to `block` still need their width defined in order to take up the entire space 
+      of parent container. */
+  width: 100%;
+}
+
+.signup-form input[id*="terms"],
+.signup-form input[id*="terms"] + label {
+  display: inline-block;
+  width: auto;
+}
+
+.signup-form button[type="submit"] {
+  display: block;
+  margin-top: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .signup-form {
+    margin: auto;
+    width: 25rem;
+  }
+}
