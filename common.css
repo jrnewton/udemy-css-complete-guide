@@ -87,28 +87,23 @@ main {
   left: 0;
   z-index: 1;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   /* ensure that header does shrink */
   min-height: 4rem;
-}
-
-/* container of main-header__brand */
-.main-header>div {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .main-header__brand {
   color: #08630e;
   text-decoration: none;
   font-weight: bold;
-  /* font-size: 1.5rem; */
-  height: 2.5rem;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .main-header__brand img {
-  height: 100%;
+  height: 2.5rem;
+  vertical-align: middle;
 }
 
 .main-nav {
@@ -119,10 +114,11 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: flex;
 }
 
 .main-nav__item {
-  display: inline-block;
   margin: 0 1rem
 }
 
@@ -245,11 +241,7 @@ main {
 
 @media (min-width: 40rem) {
   .main-nav {
-    display: inline-block;
-    text-align: right;
-    /* KLUGE: take entire page minus the width of "uHost" div element plus the whitespace following it before main-nav div. */
-    width: calc(100% - 122px);
-    vertical-align: middle;
+    display: flex;
   }
 
   .toggle-button {
