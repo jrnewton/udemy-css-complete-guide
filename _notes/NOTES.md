@@ -608,14 +608,20 @@ Use `grid-template-columns: 200px 2fr 20% 1fr` to define columns and `grid-templ
 * You can provide a `name` in the `repeat` statement as well, `grid-template-columns: repeat(4, [col-start] 25% [col-end]);`.  This will produce 3 columns, each one with the same name `col-start` and `col-end`.  To reference the name later, use syntax `column-start: col-start <n>` where `<n>` is the number of the column.
 * If you provide a `name` in the format: `xxx-start` or `xxx-end` then named grid will automagically be generated for you.  This was covered in section 14.226 but I'm not sure I really follow it.
 
-## Grid Controls
+## Grid Content Controls
+These properties are defined on the grid container.
+
 * Use `grid-xxx-gap` to adjust the gap between rows and columns of the grid.
 * Use `justify-items` to align grid items in the row and `align-items` to align grid items in the column.  Possible values are:
   * `stretch` (default)
   * `start`
   * `end` 
   * `center`
-
+* Use `justify-content` to position the grid within it's container on the X axis and use `align-content` to position the grid on the Y axis.  Possible values are:
+  * `stretch` (default)
+  * `start`
+  * `end`
+  * `center`
 
 ## Child Element controls
 On the child elements, use `grid-xxx-start` and `grid-xxx-end` to adjust the rows and columns.  The units are:

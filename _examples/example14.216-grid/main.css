@@ -1,16 +1,17 @@
 .container {
-    height: 500px;
+    width: 800px;
+    height: 800px;
     margin: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: [r1] 5rem [r1end r2] minmax(10px, 500px) [r2end r3] 100px [r3end];
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: [r1] 5rem [r1end r2] minmax(10px, 20rem) [r2end r3] 100px [r3end];
     grid-gap: 10px 20px;
     grid-template-areas: "header header header header" 
                          ". . main main"
                          "footer footer footer footer";
-                         
+
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 .el1 {
