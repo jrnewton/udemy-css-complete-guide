@@ -187,9 +187,8 @@
   .plan {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 0.5rem;
-    height: 30rem;
+    justify-content: space-between;
+    height: 28rem;
 
     width: 30%;
     min-width: 13rem;
@@ -200,13 +199,11 @@
     /*          X   Y   blur  spread  color               */
     /*                                last arg is opacity */
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    height: 32rem;
+    height: 30rem;
+    z-index: 5;
   }
    
   .key-feature__items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     justify-content: center;
   }
