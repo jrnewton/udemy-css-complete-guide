@@ -299,7 +299,7 @@ __TODO__ need more details here.  Course coverage not great.
 
 ## z-index
 * default value is `auto` which is equal to `0`.
-* Will not take effect unless you've changed position property to a non-default value (Ie not `static`).
+* Will not take effect unless you've changed `position` property to a non-default value (Ie not `static`) __unless__ you are using flexbox.
 * When there are multiple elements with same z-index, the last element in the HTML source file wins and is displayed above the other elements.
 
 ## Stacking Context
