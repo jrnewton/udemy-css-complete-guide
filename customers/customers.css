@@ -66,15 +66,16 @@ main {
 
 @media (min-width: 40rem) {
   .testimonial {
-    margin: 0 auto; /* trick: center this element horizontally */
-    max-width: 70rem;  /* don't allow sections to expand unbounded */
+    margin: 3rem 0;
+    max-width: 70rem; /* don't allow sections to expand unbounded */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .testimonial__image-container {
     width: 65%;
     max-width: 580px;
-    display: inline-block;
-    vertical-align: middle;
   }
 
   .testimonial__image {
@@ -82,10 +83,7 @@ main {
   }
 
   .testimonial__info {
-    text-align: right;
     padding: 0.9rem;
-    display: inline-block;
-    vertical-align: middle;
     width: 30%;
   }
 }
