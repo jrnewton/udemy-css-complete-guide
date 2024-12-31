@@ -617,7 +617,7 @@ These properties are defined on the grid container.
   * `start`
   * `end` 
   * `center`
-* Use `justify-content` to position the grid within it's container on the X axis and use `align-content` to position the grid on the Y axis.  Possible values are:
+* Use `justify-content` to position the grid itself within it's container on the X axis and use `align-content` to position the grid on the Y axis.  Possible values are:
   * `stretch` (default)
   * `start`
   * `end`
@@ -628,6 +628,12 @@ On the child elements, use `grid-xxx-start` and `grid-xxx-end` to adjust the row
 * `<n>` - an explict row or column line number.  Enable `Display line numbers` in devtools to see the numbers.  Negative values are also supported.  `+1` is the start of a row or column, while `-1` is always the end of row or column.
 * `span <n>` - span explicit amount of rows or columns.
 * overlap in elements is avoided by default but you can force overlap via start/end combinations.  The order in the DOM determines which element is on top, with last element being on top.  You can use `z-index` to change that behavior.
+
+You can adjust child content using `justify-self` (along X axis) and `align-self` along the Y-axix.  These values will override `justify-items` and `align-items` defined on the grid.  Possible values are:
+* `stretch` (default)
+* `start`
+* `end`
+* `center`
 
 ## Shorthand notation
 * `grid-column: <start> / <end>`

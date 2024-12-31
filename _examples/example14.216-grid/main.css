@@ -25,6 +25,9 @@
     grid-row: r2 / span 1; */
     z-index: 10;
     grid-area: main;
+
+    justify-self: end;
+    align-self: start;
 }
 
 .el3 {
