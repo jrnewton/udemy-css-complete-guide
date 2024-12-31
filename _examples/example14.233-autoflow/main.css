@@ -1,13 +1,15 @@
 .container {
     margin: 20px;
     display: grid;
+    /* explicit grid */
     grid-template-columns: 15rem 15rem;
+    grid-template-rows: 20rem;
     justify-content: center;
     grid-gap: 1.5rem;
-    /* style automatically generated rows */
-    grid-auto-rows: minmax(8rem, auto);
+
+    /* implicit grid */
     grid-auto-flow: row;
-    grid-auto-columns: 5rem;
+    grid-auto-rows: minmax(8rem, auto);
 }
 
 .quote {
