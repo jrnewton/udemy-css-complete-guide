@@ -1,14 +1,15 @@
 .container {
     margin: 20px;
     display: grid;
+
     /* explicit grid */
-    grid-template-columns: 15rem 15rem;
+    grid-template-columns: repeat(3, 10rem);
     grid-template-rows: 20rem;
     justify-content: center;
     grid-gap: 1.5rem;
 
     /* implicit grid */
-    grid-auto-flow: row;
+    grid-auto-flow: row dense;
     grid-auto-rows: minmax(8rem, auto);
 }
 
@@ -18,6 +19,10 @@
   font-family: sans-serif;
   padding: 1rem;
   border-radius: 5px;
+}
+
+.quote:nth-of-type(2) {
+  grid-column: span 2;
 }
 
 .quote--featured {
