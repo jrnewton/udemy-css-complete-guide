@@ -599,6 +599,7 @@ Use firefox devtools, _still_ better than Chrome devtools.
   * relative `%`
   * ratio `fr` (fraction), just like `flex-grow` and `flex-shrink`
   * `auto` to take remaining area
+  * `fit-content(<size>)` defines the minimum size for the content.  Size is %, px, rem. 
   * `repeat(<n>, <unit>)` repeat the `<unit>` value `<n>` times. Eg `repeat(4, 25%)`
   * `minmax(<min>, <max>)` min and max values for the area.
   * You can provide a `name` for each row/column like so: `grid-template-row: [row-one row-uno] 200px`. Row 1 can now be referred to via `row-one` or `row-uno` in grid start/end statements.  These names do _not_ appear in devtools.
