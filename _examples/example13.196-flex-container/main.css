@@ -18,6 +18,17 @@ body {
     background: white;
     padding: 10px;
     border: 5px solid black;
+    height: 1300px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #flex-container2 { 
+    display: none;
+    flex-flow: column wrap;
   }
 
 .item-1 {

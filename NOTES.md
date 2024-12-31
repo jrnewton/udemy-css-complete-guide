@@ -547,3 +547,39 @@ You can combine multiple queries with `and` or with `,` (aka `or`):
 * For validation - use `:valid` and `:invalid` pseudo selectors along with `invalid`, `disabled` and `required` element attributes.
 * Styling `select` form element requires extra work.  See https://stackoverflow.com/questions/1895476/how-do-i-style-a-select-dropdown-with-only-css
 
+# Text and Fonts
+TBD
+
+# Flexbox
+* Allows you to get rid of `display: inline-block`
+* Allows us to change the way our elements are displayed.
+* `display: flex` creates a flex container. A container contains children aka `flex items`.
+* You can apply properties to the flex container and the flex items.
+  * for the container: `flex-flow:`, `justify-content:`, `align-content:`, `align-items:`
+  * for the items: `order:`, `flex:`, `align-self:`
+
+## Flex Container
+* `display: flex`, `display: inline-flex` - create a container.
+* `flex-direction: row` - create rows of items.  The height of each row is based on the flex items in said row.  Items will take only the space needed.
+* `flex-direction: column` - create columns of items.  The width of each column is based the flex items in said column.  Items will take only the space needed.
+* `flex-wrap: nowrap` - do not wrap the flex items to a new row.
+* `flex-wrap: wrap` - wrap the contents.
+* "reverse" values are available for `wrap`, `column` and `row` and will change location and direction of the axis pair.
+* `flex-flow` is shorthand for `flex-direction` and `flex-wrap`.  It looks like `flex-flow: row wrap;`.
+
+## Main Axis vs. Cross Axis
+Content is rendered on the `main` axis to start and moves to the `cross` axis when wrapping occurs.
+
+![Flexbox Axis Example](notes-flexbox-axis.png)
+
+## Alignment
+`align-items` property aligns flex items along the `cross` axis.
+`justify-content` property aligns flex items along the `main` axis.
+`align-content` property sets the distribution of space between and around flex items along the `cross` axis. [source](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+
+![Flexbox Align and Justify Example](notes-flexbox-align-justify.png)
+
+## Flex Items
+TBD
+
+
