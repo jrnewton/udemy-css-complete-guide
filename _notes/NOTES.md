@@ -602,8 +602,37 @@ Use firefox devtools, _still_ better than Chrome devtools.
   * `repeat(<n>, <unit>)` repeat the `<unit>` value `<n>` times. Eg `repeat(4, 25%)`
   * `minmax(<min>, <max>)` min and max values for the area.
   * You can provide a `name` for each row/column like so: `grid-template-row: [row-one row-uno] 200px`. Row 1 can now be referred to via `row-one` or `row-uno` in grid start/end statements.  These names do _not_ appear in devtools.
+* Use `grid-xxx-gap` to adjust the gap between rows and columns of the grid.
 * On the child elements, use `grid-xxx-start` and `grid-xxx-end` to adjust the rows and columns.  The units are:
   * `<n>` - an explict row or column line number.  Enable `Display line numbers` in devtools to see the numbers.  Negative values are also supported.  `+1` is the start of a row or column, while `-1` is always the end of row or column.
   * `span <n>` - span explicit amount of rows or columns.
   * overlap in elements is avoided by default but you can force overlap via start/end combinations.  The order in the DOM determines which element is on top, with last element being on top.  You can use `z-index` to change that behavior.
+
+## Shorthand notation
+* `grid-column: <start> / <end>`
+* `grid-area:  <row-start> / <col-start> / <row-end> / <col-end>`
+* `grid-gap: <row-gap> <col-gap>` - _note_ there is no forward slash in the value.
+
+# Grid Area
+Grid area allows you to replace references to explicit row/col values (via `grid-xxx-start` and `grid-xxx-end`) with named areas.
+
+In a grid with 4 columns and 3 rows, you can define named areas with this syntax:
+```
+.container { 
+  
+  grid-template-areas: "header header header header" 
+                       ". . main main"
+                       "footer footer footer footer";
+
+}
+```
+
+Then map the item onto the area:
+```
+.item {
+  grid-area: main
+}
+```
+
+* __NOTE__: DOM order is not used to resolve conflicts (like with grid start/end) when laying out elements using `grid-area`.
 
