@@ -588,3 +588,10 @@ Content is rendered on the `main` axis to start and moves to the `cross` axis wh
 * `flex-shrink` - like grow but for shrinking. Default value is `1` which means element can shrink.  Use `0` to prevent shrink or `>1` to increase ratio that element shrinks.
 * `flex-basis:<size>` - change size of a flex item depending on orientation of the `main` axis. Eg `row` will adjust `width` and `column` will adjust `height`.  The `auto` value maps to a defined `width` or `height` value on the element.  Percentage values of flex-basis are resolved against the flex container. [source](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
 * `flex:` - is shorthand for `<grow> <shrink> <basis>`
+
+# CSS Grid
+* Controls a grid in two dimensions
+* use `display: grid` to create a grid container
+* Use `grid-template-columns: 200px 2fr 20% 1fr` to define columns. `fr` stands for fraction and is a ratio just like `flex-grow` and `flex-shrink`.
+* Use `grid-template-rows: <ditto>` to define rows
+* Use `grid-xxx-start: <n>` and `grid-xxx-end: <n>` to adjust the number of row or columns used for the child element. In devtools, enable `Display line numbers` to determine which `<n>` value is needed.
