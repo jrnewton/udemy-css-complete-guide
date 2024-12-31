@@ -615,7 +615,7 @@ Use firefox devtools, _still_ better than Chrome devtools.
 * `grid-area:  <row-start> / <col-start> / <row-end> / <col-end>`
 * `grid-gap: <row-gap> <col-gap>` - _note_ there is no forward slash in the value.
 
-# Grid Area
+## Grid Area
 Grid area allows you to replace references to explicit row/col values (via `grid-xxx-start` and `grid-xxx-end`) with named areas.
 
 In a grid with 4 columns and 3 rows, you can define named areas with this syntax:
@@ -637,4 +637,8 @@ Then map the item onto the area:
 ```
 
 * __NOTE__: DOM order is not used to resolve conflicts (like with grid start/end) when laying out elements using `grid-area`.
+
+## Relation to `position`
+
+Elements that are not part of the document flow (Ie `fixed` and `absolute`) are not part of the grid.
 

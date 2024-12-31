@@ -8,15 +8,19 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Tahoma, sans-serif;
   margin: 0;
+  display: grid;
+  grid-template-rows: 4rem auto 8rem;
+  grid-template-areas:  "header"
+                        "main"
+                        "footer";
 }
-
-/* This messes with our style to ensure footer is at the bottom of page.
-html, body {
-  height: 100%;
-} */
 
 #modal-backdrop,
 #mobile-nav-backdrop {
@@ -69,13 +73,7 @@ html, body {
 }
 
 main {
-  /* ensure that main takes up vertical space such that the footer 
-     is always at the bottom of the viewport 
-     
-     The calc is the vh minus the size of navbar (3.5rem) minus size of the footer (8rem).
-  */
-  min-height: calc(100vh - 4rem - 131px);
-  margin-top: 4rem;
+  grid-area: main;
 }
 
 .main-header {
@@ -99,6 +97,7 @@ main {
   color: #08630e;
   text-decoration: none;
   font-weight: bold;
+  grid-area: header;
 }
 
 .main-header__brand img {
@@ -161,7 +160,7 @@ main {
   background-color: black;
   color: white;
   padding: 2rem;
-  margin-top: 3rem;
+  grid-area: footer;
 }
 
 .main-footer__items {
