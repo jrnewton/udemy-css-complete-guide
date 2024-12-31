@@ -2,7 +2,7 @@ These are my notes from the course, https://www.udemy.com/course/css-the-complet
 
 Content is roughly chronological based on the course sections, although sometimes I'll go back an update a previous section with new knowledge or to clarify a point.
 
-Look for `KLUDGE` in the source code for useful hacks.
+Look for `KLUGE` in the source code for useful hacks.
 
 # Fonts
 - Serif: extending features at the end of strokes
