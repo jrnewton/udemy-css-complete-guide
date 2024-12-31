@@ -8,6 +8,9 @@
     grid-template-areas: "header header header header" 
                          ". . main main"
                          "footer footer footer footer";
+                         
+    justify-content: center;
+    align-items: center;
 }
 
 .el1 {

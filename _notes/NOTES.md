@@ -594,22 +594,34 @@ Use firefox devtools, _still_ better than Chrome devtools.
 
 * Controls a grid in two dimensions
 * use `display: grid` to create a grid container
-* Use `grid-template-columns: 200px 2fr 20% 1fr` to define columns and `grid-template-rows` to define rows.  You can supply these units:
-  * absolute `px`
-  * relative `%`
-  * ratio `fr` (fraction), just like `flex-grow` and `flex-shrink`
-  * `auto` to take remaining area
-  * `fit-content(<size>)` defines the minimum size for the content.  Size is %, px, rem. 
-  * `repeat(<n>, <unit>)` repeat the `<unit>` value `<n>` times. Eg `repeat(4, 25%)`
-  * `minmax(<min>, <max>)` min and max values for the area.
-  * You can provide a `name` for each row/column like so: `grid-template-row: [row-one row-uno] 200px`. Row 1 can now be referred to via `row-one` or `row-uno` in grid start/end statements.  These names do _not_ appear in devtools.
-  * You can provide a `name` in the `repeat` statement as well, `grid-template-columns: repeat(4, [col-start] 25% [col-end]);`.  This will produce 3 columns, each one with the same name `col-start` and `col-end`.  To reference the name later, use syntax `column-start: col-start <n>` where `<n>` is the number of the column.
-  * If you provide a `name` in the format: `xxx-start` or `xxx-end` then named grid will automagically be generated for you.  This was covered in section 14.226 but I'm not sure I really follow it.
+
+## Grid Definition
+Use `grid-template-columns: 200px 2fr 20% 1fr` to define columns and `grid-template-rows` to define rows.  You can supply these units:
+* absolute `px`
+* relative `%`
+* ratio `fr` (fraction), just like `flex-grow` and `flex-shrink`
+* `auto` to take remaining area
+* `fit-content(<size>)` defines the minimum size for the content.  Size is %, px, rem. 
+* `repeat(<n>, <unit>)` repeat the `<unit>` value `<n>` times. Eg `repeat(4, 25%)`
+* `minmax(<min>, <max>)` min and max values for the area.
+* You can provide a `name` for each row/column like so: `grid-template-row: [row-one row-uno] 200px`. Row 1 can now be referred to via `row-one` or `row-uno` in grid start/end statements.  These names do _not_ appear in devtools.
+* You can provide a `name` in the `repeat` statement as well, `grid-template-columns: repeat(4, [col-start] 25% [col-end]);`.  This will produce 3 columns, each one with the same name `col-start` and `col-end`.  To reference the name later, use syntax `column-start: col-start <n>` where `<n>` is the number of the column.
+* If you provide a `name` in the format: `xxx-start` or `xxx-end` then named grid will automagically be generated for you.  This was covered in section 14.226 but I'm not sure I really follow it.
+
+## Grid Controls
 * Use `grid-xxx-gap` to adjust the gap between rows and columns of the grid.
-* On the child elements, use `grid-xxx-start` and `grid-xxx-end` to adjust the rows and columns.  The units are:
-  * `<n>` - an explict row or column line number.  Enable `Display line numbers` in devtools to see the numbers.  Negative values are also supported.  `+1` is the start of a row or column, while `-1` is always the end of row or column.
-  * `span <n>` - span explicit amount of rows or columns.
-  * overlap in elements is avoided by default but you can force overlap via start/end combinations.  The order in the DOM determines which element is on top, with last element being on top.  You can use `z-index` to change that behavior.
+* Use `justify-items` to align grid items in the row and `align-items` to align grid items in the column.  Possible values are:
+  * `stretch` (default)
+  * `start`
+  * `end` 
+  * `center`
+
+
+## Child Element controls
+On the child elements, use `grid-xxx-start` and `grid-xxx-end` to adjust the rows and columns.  The units are:
+* `<n>` - an explict row or column line number.  Enable `Display line numbers` in devtools to see the numbers.  Negative values are also supported.  `+1` is the start of a row or column, while `-1` is always the end of row or column.
+* `span <n>` - span explicit amount of rows or columns.
+* overlap in elements is avoided by default but you can force overlap via start/end combinations.  The order in the DOM determines which element is on top, with last element being on top.  You can use `z-index` to change that behavior.
 
 ## Shorthand notation
 * `grid-column: <start> / <end>`
