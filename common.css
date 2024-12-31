@@ -171,11 +171,10 @@ main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
 }
 
 .main-footer__item {
-  margin: 1rem 0;
+  margin: 0.5rem 0; /* reduce margin as margin collapsing does not occur in flexbox */
 }
 
 .main-footer__item a {
@@ -257,6 +256,8 @@ main {
 
   .main-footer__items {
     flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0 0.5rem
     
   }
 

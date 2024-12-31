@@ -204,6 +204,8 @@ There is also `outline`:
 
 From https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
+__NOTE__ Margins don't collapse in a container with display set to flex or grid.
+
 # Shorthand properties
 * Border: width style color, Eg 2px dashed orange
 * Margin: top right bottom left, Eg 5px 10px 5px 10px 
