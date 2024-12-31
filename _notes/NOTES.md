@@ -582,6 +582,9 @@ Content is rendered on the `main` axis to start and moves to the `cross` axis wh
 ![Flexbox Align and Justify Example](notes-flexbox-align-justify.png)
 
 ## Flex Items
-TBD
-
-
+* `order: <n>` - change order of flex item within the flex container, relative to `main` axis.  By default `order` is `0`.
+* `align-self` - change position of flex item relative to `cross` axis.  The property values are the same as `align-items`.
+* `flex-grow` - change growth factor of flex item.  By default `flex-grow` is `0`. When `wrap` is enabled, a flex item with `flex-grow > 0` will consume the entire space.
+* `flex-shrink` - like grow but for shrinking. Default value is `1` which means element can shrink.  Use `0` to prevent shrink or `>1` to increase ratio that element shrinks.
+* `flex-basis:<size>` - change size of a flex item depending on orientation of the `main` axis. Eg `row` will adjust `width` and `column` will adjust `height`.  The `auto` value maps to a defined `width` or `height` value on the element.  Percentage values of flex-basis are resolved against the flex container. [source](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
+* `flex:` - is shorthand for `<grow> <shrink> <basis>`
