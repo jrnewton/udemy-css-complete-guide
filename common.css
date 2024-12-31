@@ -168,7 +168,10 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-footer__item {
@@ -252,8 +255,12 @@ main {
     display: none;
   }
 
+  .main-footer__items {
+    flex-flow: row nowrap;
+    
+  }
+
   .main-footer__item {
-    display: inline-block;
     margin: 0 1rem;
   }
 }
