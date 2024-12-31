@@ -663,6 +663,8 @@ Then map the item onto the area:
 
 * __NOTE__: DOM order is not used to resolve conflicts (like with grid start/end) when laying out elements using `grid-area`.
 
+You can make a grid responsive by using media queries and changing the named grid areas accordingly.
+
 ## Relation to `position`
 
 Elements that are not part of the document flow (Ie `fixed` and `absolute`) are not part of the grid.
