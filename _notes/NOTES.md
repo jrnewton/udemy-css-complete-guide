@@ -590,8 +590,17 @@ Content is rendered on the `main` axis to start and moves to the `cross` axis wh
 * `flex:` - is shorthand for `<grow> <shrink> <basis>`
 
 # CSS Grid
+Use firefox devtools, _still_ better than Chrome devtools.
+
 * Controls a grid in two dimensions
 * use `display: grid` to create a grid container
-* Use `grid-template-columns: 200px 2fr 20% 1fr` to define columns. `fr` stands for fraction and is a ratio just like `flex-grow` and `flex-shrink`.
+* Use `grid-template-columns: 200px 2fr 20% 1fr` to define columns. You can supply these units:
+  * absolute `px`
+  * relative `%`
+  * ratio `fr` (fraction), just like `flex-grow` and `flex-shrink`
+  * `auto` to take remaining area
+  * `repeat(<n>, <unit>)` repeat the `<unit>` value `<n>` times. Eg `repeat(4, 25%)`
+  * `minmax(<min>, <max>)` min and max values for the area.
 * Use `grid-template-rows: <ditto>` to define rows
 * Use `grid-xxx-start: <n>` and `grid-xxx-end: <n>` to adjust the number of row or columns used for the child element. In devtools, enable `Display line numbers` to determine which `<n>` value is needed.
+
