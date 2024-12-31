@@ -12,6 +12,7 @@
 
 .el1 {
     background: rgba(255, 154, 72, 0.5);
+    grid-column: 2 / 3;
 }
 
 .el2 {
