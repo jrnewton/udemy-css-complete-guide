@@ -3,7 +3,7 @@
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 5rem minmax(10px, 100px);
+    grid-template-rows: [r1] 5rem [r1end r2] minmax(10px, 100px) [r2end r3] 100px [r3end];
 }
 
 .el1 {
@@ -12,14 +12,18 @@
 
 .el2 {
     background: rgba(255, 0, 0, 0.5);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: r2;
+    grid-row-end: span 1;
 }
 
 .el3 {
     background: rgba(0, 128, 0, 0.5);
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    grid-row-start: r1;
+    grid-row-end: r2end;
 }
 
 .el4 {
