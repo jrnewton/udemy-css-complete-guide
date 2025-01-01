@@ -678,3 +678,11 @@ You can make a grid responsive by using media queries and changing the named gri
 
 Elements that are not part of the document flow (Ie `fixed` and `absolute`) are not part of the grid.
 
+# Naming CSS Classes
+* Use `kebab-case`.  CSS is _case-insensitive_.
+* Name classes by feature, Eg `.page-title`
+* Use Block Element Modifier (BEM). 
+  * `.<block>__<element>--<modifier>`
+  * `.menu-main__item--size-big`
+  * `.button--success`
+
