@@ -1,5 +1,5 @@
 main {
-  padding-top: 2.5rem;
+  padding-top: 1rem;
 }
 
 .signup-title {
@@ -10,17 +10,19 @@ main {
 
 .signup-form {
   padding: 1rem;
+  display: grid;
+  grid-auto-rows: 2rem;
+  grid-row-gap: 0.5rem;
 }
 
 .signup-form label {
   font-weight: bold;
 }
-  
-.signup-form label, 
-.signup-form select, 
+
+.signup-form label,
+.signup-form select,
 .signup-form input {
   display: block;
-  margin-top: 1rem;
   /* KLUGE
       Form elements like `input` and `select` are `inline` elements and when changed
       to `block` still need their width defined in order to take up the entire space 
@@ -70,18 +72,27 @@ main {
      `.signup-form input:not([type="checkbox"]),`
      is more specific and wins out over this one.
   */
-  border: 1px solid red !important; 
+  border: 1px solid red !important;
   background-color: rgb(255, 180, 180);
 }
 
 .signup-form button[type="submit"] {
   display: block;
-  margin-top: 1rem;
 }
 
 @media (min-width: 40rem) {
   .signup-form {
     margin: auto;
-    width: 25rem;
+    width: 30rem;
+    grid-template-columns: 10rem auto;
+    grid-gap: 1rem 0.5rem;
+  }
+
+  .signup-form [id="title"] {
+    grid-column: span 2;
+  }
+
+  .signup-form__checkbox {
+    grid-column: span 2;
   }
 }
