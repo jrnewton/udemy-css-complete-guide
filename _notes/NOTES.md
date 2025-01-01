@@ -686,3 +686,17 @@ Elements that are not part of the document flow (Ie `fixed` and `absolute`) are 
   * `.menu-main__item--size-big`
   * `.button--success`
 
+# ------------- NOTES BELOW, NOT FROM THE COURSE -------------
+
+# CSS Variables
+Variables _are_ case-sensitive, so stick with `kebab-case` as with classes.
+Example:
+```
+:root {
+    --main-color: #06c;
+}
+
+#foo h1 {
+    color: var(--main-color);
+}
+```
