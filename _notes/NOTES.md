@@ -642,6 +642,8 @@ You can adjust child content using `justify-self` (along X axis) and `align-self
 * `end`
 * `center`
 
+You can adjust gaps with `grid-row-gap` and `grid-column-gap`. 
+
 ## Shorthand notation
 * `grid-column: <start> / <end>`
 * `grid-area:  <row-start> / <col-start> / <row-end> / <col-end>`
