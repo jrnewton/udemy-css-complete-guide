@@ -200,20 +200,20 @@ There is also `outline`:
 * Does not affect box shadow.
 
 # Margin Collapsing
-  The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.
+The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as margin collapsing. Note that the margins of floating and absolutely positioned elements never collapse.
 
 From https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
 __NOTE__ Margins don't collapse in a container with display set to flex or grid.
 
 # Shorthand properties
-* Border: width style color, Eg 2px dashed orange
-* Margin: top right bottom left, Eg 5px 10px 5px 10px 
-* Margin: top & bottom left & right, Eg 5px 10px
-* Margin: all, Eg 8px
+* `border`: width style color, Eg 2px dashed orange
+* `margin`: top right bottom left, Eg 5px 10px 5px 10px 
+* `margin`: top & bottom left & right, Eg 5px 10px
+* `margin`: all, Eg 8px
 
 # Height and Width
-Pixel values are aboslute and do not depend on the parent element.
+Pixel values are absolute and do not depend on the parent element.
 
 _Percentage_ values are based on the space within the parent element.  Many elements will be sized based on their content.  That leads to a width or height of 100% having no effect.
 
@@ -232,18 +232,18 @@ By default, Height and Width set the dimensions of the content, with padding, bo
 You can change this via `box-sizing` style. 
 
 # Display Property
-* none: element is not visible but present in the DOM.  It does not block a position in the layout.
-* block
-* inline
-* inline-block: render like an inline element (Ie renders next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available. __TODO__: confirm all box properties are true.
+* `none`: element is not visible but present in the DOM.  It does not block a position in the layout.
+* `block`
+* `inline`
+* `inline-block`: render like an inline element (Ie renders next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available. __TODO__: confirm all box properties are true.
 
 There is also `visibility: none` which will hide the element but the element will continue to block it's position in the layout.
 
 **Inline Block is sensative to whitespace in HTML source** 
 
 # Pseudo Things
-Classes - `:class_name` - define a style for a _specific state_ of an element, Eg hover, read-only, first-child, not.
-Element - `::element_name` - define a style for a _specific part_ of an element, Eg before, after, first-letter.  [Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#summary)
+* Classes - `:class_name` - define a style for a _specific state_ of an element, Eg hover, read-only, first-child, not.
+* Element - `::element_name` - define a style for a _specific part_ of an element, Eg before, after, first-letter.  [Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#summary)
 
 # Tricks
 * Set all parent elements to `height: 100%;` to allow child element to have a specific height.
@@ -255,17 +255,17 @@ Element - `::element_name` - define a style for a _specific part_ of an element,
 Applies to block and inline elements.
 
 How should the element be positioned Aka __Position Context__
-* static (default)
-* absolute
-* relative
-* fixed
-* sticky
+* `static` (default)
+* `absolute`
+* `relative`
+* `fixed`
+* `sticky`
 
 Where should the element be placed relative to the position context
-* top
-* right
-* bottom
-* left
+* `top`
+* `right`
+* `bottom`
+* `left`
 
 __Note__: top/right/bottom/left will only have effect when the position property is set to a non-default value (Ie not `static`).
 
@@ -321,7 +321,7 @@ In this example, `headline` has a z-index value, and `image-2` has a z-index val
 ## background-size
 
 `background-size: <height> <width>;` where height and width are:
-* auto
+* `auto`
 * px
 * %
 
@@ -332,7 +332,7 @@ In this example, `headline` has a z-index value, and `image-2` has a z-index val
 ## background-position
 For an image that does not fit into it's container, position defines where the cropping will occur.
 
-`background-position: <x offset> <y offset>;` where offset
+`background-position: <x offset> <y offset>;` where offset is:
 * px
 * % - determines where to crop the image.  A value of `top = 50%` means that top and bottom will be cropped equally. Read more at https://developer.mozilla.org/en-US/docs/Web/CSS/background-position#regarding_percentages
 * position keywords - center (sames as `50% 50%`) or left top (same as `0% 0%`)
@@ -377,7 +377,7 @@ Position and sizing of an img is not as flexible as background-image, but backgr
 Args:
 * X
 * Y
-* blue
+* blur
 * spread
 * color
   * rgb and the 4th value is opacity
@@ -415,7 +415,7 @@ Examples:
 
 ## Radial
 * Use builtin `radial-gradient()` function.
-* by default, makes ellipse.  use optional first arg to make a circle.
+* By default, makes ellipse.  use optional first arg to make a circle.
 
 Examples:
 ```
