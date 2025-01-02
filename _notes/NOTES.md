@@ -246,8 +246,9 @@ Classes - `:class_name` - define a style for a _specific state_ of an element, E
 Element - `::element_name` - define a style for a _specific part_ of an element, Eg before, after, first-letter.  [Pseudo-elements act as if you had added a whole new element to the DOM, and enable you to style that.](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#summary)
 
 # Tricks
-* Set all parent elements to `width: 100%;` to allow child element to have a specific height.
-* Set left/right margin to auto `margin: 0 auto;` to center an element horizontally.  This does not work for vertical alignment.
+* Set all parent elements to `height: 100%;` to allow child element to have a specific height.
+* Use `vertical-align: middle` to center content vertically.
+* Set left/right margin to auto `margin: 0 auto;` and `text-align: center` to center an element horizontally.  This does not work for vertical alignment.
 * Create circle by setting `height` and `width` to the same value and `border-radius: 50%`
 
 # Positioning
