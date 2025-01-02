@@ -168,7 +168,7 @@ This is more flexible than _Next Sibling_.
 ```
 
 # Specificity of Selectors
-TODO: need to make sure this is correct
+__TODO__: need to make sure this is correct
 
 1. `!important`
 1. inline style (labeled `element.style` in devtools)
@@ -184,7 +184,7 @@ Conflicts are resolved by looking at the order in file, where last style wins.  
 # Performance
 * ID selector and class selector 
 * ... 
-* certain combinators? (TODO: clarify)
+* certain combinators? (__TODO__: clarify)
 * `*` selector
 
 # Box Model
@@ -235,7 +235,7 @@ You can change this via `box-sizing` style.
 * none: element is not visible but present in the DOM.  It does not block a position in the layout.
 * block
 * inline
-* inline-block: render like an inline element (Ie renders next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available. TODO: confirm all box properties are true.
+* inline-block: render like an inline element (Ie renders next to adjacent elements) with additional box properties like x-top, x-bottom and width, height available. __TODO__: confirm all box properties are true.
 
 There is also `visibility: none` which will hide the element but the element will continue to block it's position in the layout.
 
@@ -342,11 +342,11 @@ X is evaluated relative to left and Y is evaluated relative to top.
 
 ## background-origin
 
-Like box-sizing. TODO: more details
+Like box-sizing. __TODO__: more details
 
 ## background-clip
 
-Overwrites background-origin. TODO: more details.
+Overwrites background-origin. __TODO__: more details.
 
 ## background-attachment
 
