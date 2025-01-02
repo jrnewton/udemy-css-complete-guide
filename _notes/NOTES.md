@@ -83,7 +83,7 @@ Example:
  ```
 
 # Combinators
-## Adjacent Sibling aka Next Sibling
+## Next Sibling
 * Elements share the same parent.
 * Second element comes __immediately__ after first element.
 
@@ -104,8 +104,8 @@ Example:
   <p>CSS applied</p>
 </div>
 ```
-## General Sibling aka Subsequent Sibling
-This is more flexible than _Adjacent Sibling_.
+## Subsequent Sibling
+This is more flexible than _Next Sibling_.
 
 * Elements share the same parent
 * Second elements comes after first element
@@ -248,7 +248,7 @@ Element - `::element_name` - define a style for a _specific part_ of an element,
 # Tricks
 * Set all parent elements to `height: 100%;` to allow child element to have a specific height.
 * Use `vertical-align: middle` to center content vertically.
-* Set left/right margin to auto `margin: 0 auto;` and `text-align: center` to center an element horizontally.  This does not work for vertical alignment.
+* Set left/right margin to auto `margin: 0 auto;` and `text-align: center` to center an element horizontally.  __This does not work for vertical alignment__.
 * Create circle by setting `height` and `width` to the same value and `border-radius: 50%`
 
 # Positioning
