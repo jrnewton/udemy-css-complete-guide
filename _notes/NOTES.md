@@ -1,4 +1,4 @@
-These are my notes from the course, https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/
+These are my notes from the course https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/
 
 Content is roughly chronological based on the course sections, although sometimes I'll go back an update a previous section with new knowledge or to clarify a point.
 
@@ -12,19 +12,24 @@ Styles are listed from most specific (top) to least specific (bottom).
 
 Click on keyword "inherited" to see the true value, which can include ~~value~~.
 
-# Naming Conventions
-Look into `B.E.M.` aka `block, element, modifier`
+# Naming CSS Classes
+* Use `kebab-case`.  CSS is _case-insensitive_ (__except for variables__)
+* Name classes by feature, Eg `.page-title`
+* Use Block Element Modifier (BEM)
 
-Format is: `<block>__<element>--<modifier>`
-
-Example:
+## BEM Examples
 ```
-  plan__item--highlighted
+  /* .<block>__<element>--<modifier> */
+  .menu-main__item--size-big
+  .button--success
+```
 
+```
   /* plan is the logical container
      item is the element
      highlighted is the modifier
   */
+  plan__item--highlighted
 ```
 
 # Selectors
@@ -678,14 +683,6 @@ You can make a grid responsive by using media queries and changing the named gri
 ## Relation to `position`
 
 Elements that are not part of the document flow (Ie `fixed` and `absolute`) are not part of the grid.
-
-# Naming CSS Classes
-* Use `kebab-case`.  CSS is _case-insensitive_.
-* Name classes by feature, Eg `.page-title`
-* Use Block Element Modifier (BEM). 
-  * `.<block>__<element>--<modifier>`
-  * `.menu-main__item--size-big`
-  * `.button--success`
 
 # ------------- NOTES BELOW, NOT FROM THE COURSE -------------
 
